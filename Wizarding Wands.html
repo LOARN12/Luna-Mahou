@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wizarding Wands</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caudex&family=Spectral&family=Cormorant+Infant:ital@1&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        h1,
+        h2 {
+            font-family: 'Caudex', serif;
+            font-weight: bold;
+        }
+
+        body {
+            background-color: rgb(1, 11, 33);
+            font-family: 'Spectral', serif;
+            cursor: url('images/candy\ wand\ normal\ select.cur'), auto;
+            padding-top: 70px;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-image: url('https://i.pinimg.com/736x/af/eb/47/afeb479d0fbd43421f2c5b86f39eaa4e.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 60px 20px;
+            text-align: center;
+            color: #56acfd;
+        }
+
+        
+        /* This is Luna Pioneers logo and nav */
+        nav {
+            position: fixed;
+            display: flex;
+            top: 0;
+            right: 0;
+            left: 0;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+            background-color: rgba(255, 255, 255, 0.123);
+            backdrop-filter: blur(5px);
+            padding: 0 30px;
+            box-shadow: 0 0 15px #72a1de68;
+            z-index: 999;
+
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+        }
+
+        .left img {
+            width: 40px;
+            margin: 0 15px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+            padding: 15px 15px;
+            border-radius: 50px;
+            background-color: rgba(0, 0, 0, 0.30);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 10px #727fde65;
+            cursor: pointer;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            margin: 0 10px;
+        }
+
+        .box-icons {
+            display: flex;
+            gap: 40px;
+        }
+
+        .box-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            border: 2px solid #727fde;
+            text-decoration: none;
+            color: lightgray;
+            border-radius: 50%;
+            transition: 0.3s;
+
+        }
+
+        .box-icons a:hover {
+            background-color: #727fde;
+            color: black;
+            box-shadow: 0 0 15px #727fde6f;
+        }
+
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 20px;
+                gap: 10px;
+            }
+
+            .left {
+                justify-content: center;
+                width: 100%;
+            }
+
+            nav ul {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 10px;
+                margin: 0;
+            }
+
+            nav ul a {
+                margin: 5px 10px;
+                font-size: 15px;
+            }
+
+            .box-icons {
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            .box-icons a {
+                width: 28px;
+                height: 28px;
+                font-size: 16px;
+            }
+        }
+
+        /* This is end of Luna Pioneers logo and nav */
+
+
+        
+
+
+        section {
+            
+            background-color: transparent;
+            padding: 30px;
+        }
+
+        .wand-heading {
+            color: rgb(69, 100, 223);
+            font-size: 2.7rem;
+        }
+
+        .card {
+            background: transparent;
+            border-radius: 5px;
+            border: 1px solid #0a2849;
+            box-shadow: 0 8px 16px rgba(231, 241, 167, 0.15);
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .wand-card {
+            background-color: transparent;
+            backdrop-filter: blur(8px);
+        }
+
+        .wand-img:hover {
+            transform: rotate(-5deg) scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+
+        @keyframes glow-red {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+            }
+        }
+
+        @keyframes glow-blue {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px rgba(70, 130, 180, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 25px rgba(70, 130, 180, 0.6);
+            }
+        }
+
+        @keyframes glow-green {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px rgba(0, 128, 0, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 25px rgba(0, 128, 0, 0.6);
+            }
+        }
+
+        @keyframes glow-lightblue {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px rgba(173, 216, 230, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 25px rgba(173, 216, 230, 0.6);
+            }
+        }
+
+
+        @keyframes glow-orange {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 25px rgba(255, 165, 0, 0.6);
+            }
+        }
+
+        @keyframes glow-purple {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 25px rgba(138, 43, 226, 0.6);
+            }
+        }
+
+        @keyframes glow-darkred {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px rgba(139, 0, 0, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 25px rgba(139, 0, 0, 0.6);
+            }
+        }
+
+        @keyframes glow-silver {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 25px rgba(192, 192, 192, 0.6);
+            }
+        }
+
+
+        .glow-red {
+            animation: glow-red 2.5s infinite ease-in-out;
+        }
+
+        .glow-blue {
+            animation: glow-blue 2.5s infinite ease-in-out;
+        }
+
+        .glow-green {
+            animation: glow-green 2.5s infinite ease-in-out;
+        }
+
+        .glow-lightblue {
+            animation: glow-lightblue 2.5s infinite ease-in-out;
+        }
+
+        .glow-orange {
+            animation: glow-orange 2.5s infinite ease-in-out;
+        }
+
+        .glow-purple {
+            animation: glow-purple 2.5s infinite ease-in-out;
+        }
+
+        .glow-darkred {
+            animation: glow-darkred 2.5s infinite ease-in-out;
+        }
+
+        .glow-silver {
+            animation: glow-silver 2.5s infinite ease-in-out;
+        }
+
+        .card-img-top {
+            object-fit: contain;
+            width: 100%;
+            height: 250px;
+            border: none;
+            border-radius: 15px 15px 0 0;
+            box-shadow: none;
+            display: block;
+            position: relative;
+        }
+
+        .card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .card-title {
+            font-family: 'Caudex', serif;
+            font-weight: bold;
+            font-size: 1.45rem;
+            letter-spacing: 1.5px;
+            color: #376bd3;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .card-text {
+            font-family: 'Spectral', serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #4b7ad7;
+            text-align: center;
+            margin-bottom: 0.2rem;
+            line-height: 1.2;
+        }
+
+        .btn-explore {
+            background: #325f89;
+            color: #66acf8;
+            border: none;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            border-radius: 20px;
+            display: block;
+            margin: 0 auto;
+            transition: background 0.3s ease;
+        }
+
+        .btn-explore:hover {
+            background: #5284b4;
+        }
+
+        .wand-modal-bg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            border-radius: 20px;
+        }
+
+        .text-overlay-box {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            border-radius: 10px;
+            color: #fff;
+            z-index: 2;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(1px);
+        }
+
+        .modal-content {
+            position: relative;
+            z-index: 2;
+            background: transparent;
+        }
+
+        .modal-body {
+            color: #ffffff;
+            text-align: left;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+        }
+
+        .wand-modal-bg {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            backdrop-filter: blur(5px);
+            min-height: 400px;
+            padding: 2rem;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .harry-bg {
+            background-image: url('images/Harry.jpg');
+        }
+
+        .hermione-bg {
+            background-image: url('images/Hermione.jfif');
+        }
+
+        .draco-bg {
+            background-image: url('images/Draco.jfif');
+        }
+
+        .luna-bg {
+            background-image: url('images/Luna.jfif');
+        }
+
+        .ron-bg {
+            background-image: url('images/Ron.jfif');
+        }
+
+        .snape-bg {
+            background-image: url('images/Snape.jfif');
+        }
+
+        .dumbledore-bg {
+            background-image: url('images/Dumbledore.jpg');
+        }
+
+        .voldemort-bg {
+            background-image: url('images/Dark.jpg');
+        }
+
+        .sirius-bg {
+            background-image: url('images/Sirius.jfif');
+        }
+
+        .bellatrix-bg {
+            background-image: url('images/Dark.jpg');
+        }
+
+        /* Magical Modal Theme */
+        .modal-content {
+            color: #091e8a;
+            border: 2px solid #254fb3;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(13, 82, 173, 0.7);
+            animation: fadeInUp 0.6s ease;
+        }
+
+        /* Modal Header Glow */
+        .modal-header {
+            border-bottom: 1.5px solid #0d55ad;
+            background: rgba(41, 38, 38, 0.5);
+            box-shadow: 0 0 10px rgba(13, 66, 173, 0.4);
+        }
+
+        /* Modal Title */
+        .modal-title {
+            color: #cdd4f5;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .modal-dialog {
+            max-width: 500px;
+            max-height: fit-content;
+        }
+
+        /* Modal Body Styling */
+        .modal-body p {
+            margin-bottom: 0.6rem;
+        }
+
+        /* Close Button Glow */
+        .btn-close-white:hover {
+            filter: drop-shadow(0 0 4px #86bdfc);
+            transform: scale(1.1);
+        }
+
+        /* Glow on Explore button */
+        .btn-explore:hover {
+            box-shadow: 0 0 10px #86b9fc;
+            background-color: #113c79;
+            border-color: #a2ccfb;
+        }
+
+        /* Animation for modal entrance */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 50px, 0);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        /* This is Luna Pioneers footer */
+.custom-footer {
+    background-color: #0a0c1a;
+    color: lightgray;
+    padding: 40px 20px 0;
+    font-family: 'Inter', sans-serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo .logo-title img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+
+.footer-col {
+    flex: 1 1 180px;
+    margin: 20px;
+}
+
+.footer-logo h2{
+    display: flex;
+    font-size: 24px;
+    color: #727fde;
+    margin-bottom: 15px;
+}
+
+.footer-logo p{
+    display: flex;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    color: #727fde;
+    padding-bottom: 15px;
+}
+
+.footer-col h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 15px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #aaa;
+    transition: 0.3s;
+    
+}
+
+.footer-col ul li a:hover {
+    color: white;
+    text-shadow: 0 0 10px #727fdeaa;
+}
+
+.footer-socials a{
+    display: inline-block;
+    font-size: 25px;
+    margin-right: 15px;
+    color: #727fde;
+    transition: transform 0.3s cubic-bezier(1, 1.56,0.64, 1), color 0.3s ease;
+}
+
+.footer-socials a:hover{
+    color: white;
+    text-shadow: 0 0 10px #727fde;
+    transform: translateY(-8px) rotate(-360deg);
+
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    background-color: rgb(13, 13, 44);
+    color: lightgray;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <div class="left">
+                <img src="images/Luna Logo Txt.jpg" alt="logo">
+                <h1>
+                    <spam style="color: rgb(65, 65, 242);">LUNA PIONEERS</spam>
+                </h1>
+            </div>
+            <ul>
+                <a href="index.html" target="_parent">Home</a>
+
+                <li>
+                    <a href="AboutUs.html" target="_blank">About us</a>
+                </li>
+                <li>
+                    <a href="#footer">Contact</a>
+                </li>
+                
+                <li>
+                    <a href="pj.html" target="_blank">World</a>
+                </li>
+
+            </ul>
+            <div class="box-icons">
+                <a href="https://youtu.be/VO-df6nkLhc?list=RDVO-df6nkLhc&amp;t=2"><i class="bx  bx-movie-play"></i> </a>
+                <a href="#"><i class="bx  bx-message-minus"></i> </a>
+                <a href="#"><i class="bx bxl-facebook-circle"></i> </a>
+            </div>
+
+        </nav>
+
+        <audio id="wandSound" src="sounds/the-sound-of-magic-and-bells.mp3" preload="auto"></audio>
+
+
+        <div class="container-fluid mt-4">
+            <section class="row justify-content-center">
+                <h3 class="wand-heading text-center mb-4">Wands' Showcase</h3>
+
+                <!-- Harry Potter -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card glow-red">
+                        <img src="images/Untitled design (5).png" class="card-img-top wand-img" alt="Harry Potter Wand">
+                        <div class="card-body">
+                            <h5 class="card-title">Harry Potter</h5>
+                            <p class="card-text">11", Holly, Phoenix Feather.</p>
+                            <p class="card-text">Loyal & Powerful.</p>
+                            <a href="#" class="btn btn-explore" data-bs-toggle="modal"
+                                data-bs-target="#modalHarry">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hermione Granger -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card glow-blue">
+                        <img src="images/Untitled design (14).png" class="card-img-top wand-img"
+                            alt="Hermione Granger Wand">
+                        <div class="card-body">
+                            <h5 class="card-title">Hermione Granger</h5>
+                            <p class="card-text">10¾", Vine Wood, Dragon Heartstring.</p>
+                            <p class="card-text">Precise & Intelligent.</p>
+                            <a href="#" class="btn btn-explore" data-bs-toggle="modal"
+                                data-bs-target="#modalHermione">Explore</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Draco Malfoy -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card glow-green">
+                        <img src="images/Untitled design (13).png" class="card-img-top wand-img"
+                            alt="Draco Malfoy Wand">
+                        <div class="card-body">
+                            <h5 class="card-title">Draco Malfoy</h5>
+                            <p class="card-text">10", Hawthorn, Unicorn Hair.</p>
+                            <p class="card-text">Proud and Complex.</p>
+                            <a href="#" class="btn btn-explore" data-bs-toggle="modal"
+                                data-bs-target="#modalDraco">Explore</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Luna Lovegood -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card glow-lightblue">
+                        <img src="images/Untitled design (12).png" class="card-img-top wand-img"
+                            alt="Luna Lovegood Wand">
+                        <div class="card-body">
+                            <h5 class="card-title">Luna Lovegood</h5>
+                            <p class="card-text">Unique Wood, Unknown Core.</p>
+                            <p class="card-text">Dreamy and Free-spirited.</p>
+                            <a href="#" class="btn btn-explore" data-bs-toggle="modal"
+                                data-bs-target="#modalLuna">Explore</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ron Weasley -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card glow-orange">
+                        <img src="images/Untitled design (11).png" class="card-img-top wand-img" alt="Ron Weasley Wand">
+                        <div class="card-body">
+                            <h5 class="card-title">Ron Weasley</h5>
+                            <p class="card-text">14", Willow, Unicorn Hair.</p>
+                            <p class="card-text">Loyal and Warm-hearted.</p>
+                            <a href="#" class="btn btn-explore" data-bs-toggle="modal"
+                                data-bs-target="#modalRon">Explore</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Severus Snape -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card glow-green">
+                        <img src="images/Untitled design (10).png" class="card-img-top wand-img" alt="Snape Wand">
+                        <div class="card-body">
+                            <h5 class="card-title">Severus Snape</h5>
+                            <p class="card-text">Unknown Wand.</p>
+                            <p class="card-text">Shrouded in Mystery and Mastery.</p>
+                            <a href="#" class="btn btn-explore" data-bs-toggle="modal"
+                                data-bs-target="#modalSnape">Explore</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dumbledore -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card glow-purple">
+                        <img src="images/Untitled design (6).png" class="card-img-top wand-img" alt="Dumbledore Wand">
+                        <div class="card-body">
+                            <h5 class="card-title">Albus Dumbledore</h5>
+                            <p class="card-text">15", Elder, Thestral Tail Hair.</p>
+                            <p class="card-text">The Elder Wand.</p>
+                            <a href="#" class="btn btn-explore" data-bs-toggle="modal"
+                                data-bs-target="#modalDumbledore">Explore</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Voldemort -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card glow-darkred">
+                        <img src="images/Untitled design (9).png" class="card-img-top wand-img" alt="Voldemort Wand">
+                        <div class="card-body">
+                            <h5 class="card-title">Lord Voldemort</h5>
+                            <p class="card-text">13½", Yew, Phoenix Feather.</p>
+                            <p class="card-text">Ruthless and Dark.</p>
+                            <a href="#" class="btn btn-explore" data-bs-toggle="modal"
+                                data-bs-target="#modalVoldemort">Explore</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sirius Black -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card glow-silver">
+                        <img src="images/Untitled design (8).png" class="card-img-top wand-img" alt="Sirius Black Wand">
+                        <div class="card-body">
+                            <h5 class="card-title">Sirius Black</h5>
+                            <p class="card-text">Unknown length and core.</p>
+                            <p class="card-text">Rebellious and Noble.</p>
+                            <a href="#" class="btn btn-explore" data-bs-toggle="modal"
+                                data-bs-target="#modalSirius">Explore</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bellatrix Lestrange -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card glow-darkred">
+                        <img src="images/Untitled design (7).png" class="card-img-top wand-img" alt="Bellatrix Wand">
+                        <div class="card-body">
+                            <h5 class="card-title">Bellatrix Lestrange</h5>
+                            <p class="card-text">12¾", Walnut, Dragon Heartstring.</p>
+                            <p class="card-text">Cruel & Fierce.</p>
+                            <a href="#" class="btn btn-explore" data-bs-toggle="modal"
+                                data-bs-target="#modalBellatrix">Explore</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote -->
+                <div class="col-12 text-center mt-4 mb-5">
+                    <p class="fst-italic fs-5 text-light">
+                        "Imagine when you and your wand become one — connected through the very essence of your soul,
+                        together unlocking a power beyond imagination."
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Bootstrap JS Bundle (includes Popper) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Harry Potter Modal -->
+        <div class="modal fade" id="modalHarry" tabindex="-1" aria-labelledby="modalHarryLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content wand-modal-bg harry-bg text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalHarryLabel">Harry Potter's Wand</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-overlay-box">
+                            <p><strong>Length:</strong> 11"</p>
+                            <p><strong>Wood:</strong> Holly</p>
+                            <p><strong>Core:</strong> Phoenix Feather</p>
+                            <p><strong>Lore:</strong> Loyal and powerful, it shares a twin core with Voldemort’s
+                                wand.</p>
+                            <p><strong>Fun Fact:</strong> Its core came from Fawkes, Dumbledore’s phoenix — who only
+                                gave two feathers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hermione Granger Modal -->
+        <div class="modal fade" id="modalHermione" tabindex="-1" aria-labelledby="modalHermioneLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content wand-modal-bg hermione-bg text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalHermioneLabel">Hermione Granger's Wand</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-overlay-box">
+                            <p><strong>Length:</strong> 10¾"</p>
+                            <p><strong>Wood:</strong> Vine</p>
+                            <p><strong>Core:</strong> Dragon Heartstring</p>
+                            <p><strong>Lore:</strong> Precise and intelligent, suited for a brilliant witch
+                                like Hermione.</p>
+                            <p><strong>Fun Fact:</strong> Vine wood is associated with seekers of knowledge —
+                                perfect for the brightest witch of her age.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Draco Malfoy Modal -->
+        <div class="modal fade" id="modalDraco" tabindex="-1" aria-labelledby="modalDracoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content wand-modal-bg draco-bg text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalDracoLabel">Draco Malfoy's Wand</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-overlay-box">
+                            <p><strong>Length:</strong> 10"</p>
+                            <p><strong>Wood:</strong> Hawthorn</p>
+                            <p><strong>Core:</strong> Unicorn Hair</p>
+                            <p><strong>Lore:</strong> Proud and Complex, reflecting Draco’s inner
+                                conflicts and journey.</p>
+                            <p><strong>Fun Fact:</strong> It changed allegiance to Harry in Deathly Hallows,
+                                helping him master the Elder Wand.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Luna Lovegood Modal -->
+        <div class="modal fade" id="modalLuna" tabindex="-1" aria-labelledby="modalLunaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content wand-modal-bg luna-bg text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLunaLabel">Luna Lovegood's Wand</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-overlay-box">
+                            <p><strong>Wood:</strong> Unique</p>
+                            <p><strong>Core:</strong> Unknown</p>
+                            <p><strong>Lore:</strong> Dreamy, Free-spirited, and wonderfully unique —
+                                just like Luna herself.</p>
+                            <p><strong>Fun Fact:</strong> Her second wand was crafted by Ollivander during
+                                captivity — custom for Luna's unique magic.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ron Weasley Modal -->
+        <div class="modal fade" id="modalRon" tabindex="-1" aria-labelledby="modalRonLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content wand-modal-bg ron-bg text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalRonLabel">Ron Weasley's Wand</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-overlay-box">
+                            <p><strong>Length:</strong> 14"</p>
+                            <p><strong>Wood:</strong> Willow</p>
+                            <p><strong>Core:</strong> Unicorn Hair</p>
+                            <p><strong>Lore:</strong> Loyal and Warm-hearted, this wand
+                                complements Ron’s dependable nature.</p>
+                            <p><strong>Fun Fact:</strong> Unicorn hair cores are loyal — just like Ron —
+                                but not great with ambitious magic.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Severus Snape Modal -->
+        <div class="modal fade" id="modalSnape" tabindex="-1" aria-labelledby="modalSnapeLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content wand-modal-bg snape-bg text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalSnapeLabel">Severus Snape's Wand</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-overlay-box">
+                            <p><strong>Details:</strong> Not officially known</p>
+                            <p><strong>Lore:</strong> Shrouded in secrecy, yet clearly
+                                powerful and precise in the hands of a master.</p>
+                            <p><strong>Fun Fact:</strong> Snape’s wand was never revealed in the
+                                books, but it’s rumored to be made of ebony with a dragon
+                                heartstring core.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dumbledore Modal -->
+        <div class="modal fade" id="modalDumbledore" tabindex="-1" aria-labelledby="modalDumbledoreLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content wand-modal-bg dumbledore-bg text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalDumbledoreLabel">Albus Dumbledore's
+                            Wand</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-overlay-box">
+                            <p><strong>Length:</strong> 15"</p>
+                            <p><strong>Wood:</strong> Elder</p>
+                            <p><strong>Core:</strong> Thestral Tail Hair</p>
+                            <p><strong>Lore:</strong> The fabled Elder Wand, one of the
+                                Deathly Hallows, wielded by
+                                the wise and powerful Dumbledore.</p>
+                            <p><strong>Fun Fact:</strong> The Elder Wand is unbeatable in duels,
+                                but its power comes with a
+                                heavy price — it must be won, not given.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Voldemort Modal -->
+        <div class="modal fade" id="modalVoldemort" tabindex="-1" aria-labelledby="modalVoldemortLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content wand-modal-bg voldemort-bg text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalVoldemortLabel">Lord Voldemort's
+                            Wand</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-overlay-box">
+                            <p><strong>Length:</strong> 13½"</p>
+                            <p><strong>Wood:</strong> Yew</p>
+                            <p><strong>Core:</strong> Phoenix Feather</p>
+                            <p><strong>Lore:</strong> Ruthless and Dark, twin to
+                                Harry’s wand, symbolizing fate’s
+                                intertwined path.</p>
+                            <p><strong>Fun Fact:</strong> Voldemort’s wand was made from the
+                                same phoenix feather as Harry’s, but from Fawkes’ twin,
+                                symbolizing their eternal conflict.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sirius Black Modal -->
+        <div class="modal fade" id="modalSirius" tabindex="-1" aria-labelledby="modalSiriusLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content wand-modal-bg sirius-bg text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalSiriusLabel">Sirius Black's
+                            Wand</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-overlay-box">
+                            <p><strong>Details:</strong> Length and core not revealed
+                            </p>
+                            <p><strong>Lore:</strong> Rebellious and noble,
+                                Sirius’s wand suited his bold, untamed spirit.</p>
+                            <p><strong>Fun Fact:</strong>Though never described in
+                                detail, fan theories suggest it was highly expressive
+                                and powerful.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bellatrix Lestrange Modal -->
+        <div class="modal fade" id="modalBellatrix" tabindex="-1" aria-labelledby="modalBellatrixLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content wand-modal-bg bellatrix-bg text-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalBellatrixLabel">Bellatrix
+                            Lestrange's Wand</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-overlay-box">
+                            <p><strong>Length:</strong> 12¾"</p>
+                            <p><strong>Wood:</strong> Walnut</p>
+                            <p><strong>Core:</strong> Dragon Heartstring</p>
+                            <p><strong>Lore:</strong> Twisted and Fierce,
+                                Bellatrix’s wand echoes her madness and
+                                loyalty to the Dark Lord.</p>
+                            <p><strong>Fun Fact:</strong> Crafted from walnut with a
+                                dragon heartstring core, it was as
+                                unyielding and twisted as her soul.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer" class="custom-footer">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <div class="logo-title">
+                        <img src="images/Luna Logo Plain.jpg" alt="Luna Logo">
+                    </div>
+                    <h2>Luna Pioneers</h2>
+                    <p>Explore magical lore, Hogwarts knowledge, and mytical
+                        creatures.<br>
+                        Crafted with passion by Luna Pioneers. </p>
+                        
+                    
+                    
+                </div> 
+
+                <div class="footer-col">
+                    <h3>Travel Links</h3>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="AboutUs.html">About us</a>
+                        </li>
+                        <li>
+                            <a href="#footer">Contact</a>
+                        </li>
+                       
+                        <li>
+                            <a href="pj.html">World</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Most viewed</h3>
+                    <ul>
+                        <li>
+                            <a href="newcreature.html" target="_blank">Creatures</a>
+                        </li>
+                        <li>
+                            <a href="Wizarding Wands.html" target="_self">Wands</a>
+                        </li>
+                        <li>
+                            <a href="loarn.html" target="_blank">Characters</a>
+                        </li>
+                        <li>
+                            <a href="#">Ravenclaw</a>
+                        </li>
+                        <li>
+                            <a href="#">Spells</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Social Media</h3>
+
+                    <div class="footer-socials">
+
+                        <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+
+                        <a href="#"><i class="bx bxs-videos"></i></a>
+
+                        <a href="#"><i class="bx bxl-discord"></i></a>
+
+
+                        <a href="#"><i class="bx bxl-twitch"></i></a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Luna Pioneers | For educational use only. All rights
+                    belong to J.K. Rowling &amp; Warner Bros.
+                </p>
+            </div>
+        </footer>
+
+        <script>
+            const wandSound = document.getElementById("wandSound");
+            const wandImages = document.querySelectorAll(".wand-img");
+
+            wandImages.forEach(wand => {
+                wand.addEventListener("mouseenter", () => {
+                    wandSound.currentTime = 0;
+                    wandSound.play();
+                });
+
+                wand.addEventListener("click", () => {
+                    wandSound.currentTime = 0;
+                    wandSound.play();
+                });
+            });
+        </script>
+
+</body>
+
+</html>

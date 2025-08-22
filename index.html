@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="mainpage.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <video class="back-vid" loop autoplay muted plays-inline src="videos/galaxy.mp4" type="video/mp4"></video>
+        <nav>
+            <div class="left">
+                <img src="images/Luna Logo Txt.jpg" alt="logo">
+                <h1><spam style="color: rgb(65, 65, 242);">LUNA PIONEERS</spam></h1>
+            </div>
+            <ul>
+               <a href="index.html" target="_parent">Home</a>
+        </li>
+        <li>
+          <a href="AboutUs.html" target="_blank">About us</a>
+        </li>
+        <li>
+          <a href="#footer">Contact</a>
+        </li>
+       
+        <li>
+          <a href="pj.html">World</a>
+        </li>
+                
+            </ul>
+            <div class="box-icons">
+                <a href="https://youtu.be/VO-df6nkLhc?list=RDVO-df6nkLhc&t=2"><i class='bx  bx-movie-play'  ></i> </a> 
+                <a href="#"><i class='bx  bx-message-minus'  ></i> </a>
+                <a href="#"><i class='bx bxl-facebook-circle'></i> </a>
+            </div>
+
+        </nav> <br> <br>
+
+        <div class="blackhole-box">
+            <video loop autoplay muted plays-inline src="videos/blackhole.mp4" type="video/mp4"></video>
+
+        <section class="hero">
+            <div class="hero-info">
+                <div class="hero-info-title"><i class='bx  bx-shutter'  ></i> 
+                Wandering Pioneers</div>
+                <h1>Creating<span class="gradient"> the best</span> Fictional <span class="gradient">Experience</span></h1>
+                <p>We are Luna Pioneers.We make a website project about "Harry Potter" and we named it "Wizarding World".Enter the link you see below and visit our web page. </p>
+
+              <a href="pj.html" target="_blank" class="enter-button">  <button ><i class='bx  bx-balcony'  ></i>ENTER</button></a>
+
+            </div>
+            <div class="hero-vid-box">
+                <video loop autoplay muted plays-inline src="videos/hero-video.mp4" type="video/mp4"></video>
+            </div>
+
+            <div class="scroll-down"></div>
+
+        </section>    
+
+        <div class="carousel" id="carousel">
+        <img src="memberPic/Loarn Photo.jpg" class="active" alt="Loarn">
+        <img src="memberPic/Kath Photo.jpg" class="active" alt="Kath">
+        <img src="memberPic/Tulip Photo.jpg" class="active" alt="Tulip">
+        <img src="memberPic/Hana Photo.jpg" class="active" alt="Hana">
+        <img src="memberPic/Stella Photo.jpg" class="active" alt="Stella">
+        <img src="memberPic/Avery Quinn Photo.png" class="active" alt="Avery">
+        <img src="memberPic/Jade Photo.jpg" class="active" alt="Jade">
+        <img src="memberPic/Leila Photo.jpg" class="active" alt="Leila">
+        <img src="memberPic/Eloise Photo.jpg" class="active" alt="Eloise">
+        <img src="memberPic/Raven Photo.jpg" class="active" alt="Raven">
+        <img src="memberPic/Shuuxin Photo.jpg" class="active" alt="Shuuxin">
+        <img src="memberPic/Lion Photo.jpg" class="active" alt="Lion">
+        <img src="memberPic/Mavis Photo.jpg" class="active" alt="Mavis">
+        <img src="memberPic/Monkey.D.Luffy Photo.jpg" class="active" alt="Luffy">
+        <img src="memberPic/Cold Photo.jpg" class="active" alt="Cold">
+
+        <div class="caption" id="caption" class="glow-text" >Loarn (NUCS-2410580): Where lines become stories and logic meets imagination — I create at the edge of architecture, code, and curiosity. </div>
+
+        <div class="controls">
+            <button onclick="prevSlide()"><</button>
+            <button onclick="nextSlide()">></button>
+        </div>
+    </div>
+
+
+    <script>
+       const images = document.querySelectorAll(".carousel img");
+       const caption = document.getElementById("caption");
+
+       const captions = [
+"Loarn (NUCS-2410580) : Where lines become stories and logic meets imagination — I create at the edge of architecture, code, and curiosity.",
+"Kathrine (NUCS-2410521) : Lost in a dream where every leaf whisper , secrets and magic reigns.",
+"Tulip (NUCS-2410583) : A passionate student working on a magical botany project based on Harry Potter's mystical plants.Exploring their properties, magical uses, and significance in the wizarding world.",
+"Hana (NUCS-2410374) : I like listening to music, and I also enjoy traveling.",
+"Stella (NUCS-2410560) : Just started the journey of learning. Driven by curiosity, passion, and a desire to grow."  ,
+"Avery Quinn (NUCS-2410174) : A Gryffindor by choice. A leader by nature. A witch with purpose.",
+"Jade (NUCS-2410170) : Ready to contribute my best in every line of code and technical detail.",
+"Leila (NUCS-2410491) : A little witch girl, always shy and scared, but secretly casting the most beautiful magic.",
+"Eloise (NUCS-2410558) : In the silence of galaxies, the roar of engines and the warmth of purrs — I find my flow.",
+"Raven (NUCS-2410563) : The girl who finding Selfless honesty. Gentle but do what she should do.",
+"Shuuxin (NUCS-2410434) : Tiny steps, big dreams.",
+"Lion (NUCS-2410413) : I'm single. I like reading the books with her.",
+"Mavis (NUCS-2410490) : The tech world changes fast, so stay curious and adaptable.Don't fear experimenting, and remember that collaboration often leads to the best solutions.",
+"Monkey.D.Luffy (NUCS-2410599) : Silent in the shadows, unseen even by the darkness — but powerful beyond measure.",
+"Cold (NUCS-2410213) : When Coding gives you lemons, add Vodka.",
+
+
+
+
+       ];
+
+
+       let current = 0;
+
+       function showSlide(index) {
+        images.forEach ((img , i) => {
+            img.classList.toggle("active", i === index); 
+        }) ; caption.textContent = captions[index];
+       }
+
+       function nextSlide() {
+        current = (current + 1) % images.length;
+        showSlide(current);
+       }
+
+       function prevSlide(){
+        current = (current - 1 + images.length) % images.length;
+        showSlide(current);
+       }
+
+
+
+    </script>
+
+
+
+
+
+      
+      
+<footer id="footer" class="custom-footer">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <div class="logo-title">
+        <img src="images/Luna Logo Plain.jpg" alt="Luna Logo">
+      </div>
+      <h2>Luna Pioneers</h2>
+    <p>Explore magical lore, Hogwarts knowledge, and mytical creatures.<br> Crafted with passion by <strong> Luna Pioneers.</strong> </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Travel Links</h3>
+      <ul>
+        <li>
+          <a href="index.html" target="_self">Home</a>
+        </li>
+        <li>
+          <a href="AboutUs.html" target="_blank">About us</a>
+        </li>
+        <li>
+          <a href="#footer">Contact</a>
+        </li>
+        
+        <li>
+          <a href="pj.html" target="_blank">World</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Most viewed</h3>
+      <ul>
+        <li>
+          <a href="newcreature.html" target="_blank">Creatures</a>
+        </li>
+        <li>
+          <a href="#">Wands</a>
+        </li>
+        <li>
+          <a href="loarn.html" target="_blank">Characters</a>
+        </li>
+        <li>
+          <a href="#">Ravenclaw</a>
+        </li>
+        <li>
+          <a href="#">Spells</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Social Media</h3>
+
+      <div class="footer-socials">
+        
+          <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+        
+          <a href="#"><i class='bx bxs-videos'></i></a>
+        
+          <a href="#"><i class='bx bxl-discord'></i></a>
+        
+        
+          <a href="#"><i class='bx bxl-twitch'></i></a>
+        
+      </div>
+        
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Luna Pioneers | For educational use only. All rights belong to J.K. Rowling & Warner Bros.</p>
+  </div>
+</footer>
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+    
+    
+
+    <script src="mainpage.js"></script>
+</body>
+</html>

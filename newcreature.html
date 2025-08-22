@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="newcreature.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Creatures</title>
+</head>
+
+
+<body>
+    <nav>
+            <div class="left">
+                <img src="images/Luna Logo Txt.jpg" alt="logo">
+                <h1><spam style="color: rgb(65, 65, 242);">LUNA PIONEERS</spam></h1>
+            </div>
+            <ul>
+               <a href="index.html" target="_parent">Home</a>
+        </li>
+        <li>
+          <a href="AboutUs.html" target="_blank">About us</a>
+        </li>
+        <li>
+          <a href="#footer">Contact</a>
+        </li>
+        
+        <li>
+          <a href="pj.html">World</a>
+        </li>
+                
+            </ul>
+            <div class="box-icons">
+                <a href="https://youtu.be/VO-df6nkLhc?list=RDVO-df6nkLhc&t=2"><i class='bx  bx-movie-play'  ></i> </a> 
+                <a href="#"><i class='bx  bx-message-minus'  ></i> </a>
+                <a href="#"><i class='bx bxl-facebook-circle'></i> </a>
+            </div>
+
+        </nav> <br> <br>
+        
+
+
+
+
+
+
+    <div class="container"><header>
+        <h1 class="text"><span class="gradient-text">MAGICAL CREATURES</span></h1>
+        <p class="text">Discover the wondrous and dangerous creatures that inhabit the wizarding world</p>
+    </header>
+    <div class="controls"><input type="text" id="search-input" placeholder="Search Creatures..." oninput="searchCreatures()"> </div>
+      
+      
+      <div class="filter-buttons"><button class="active" onclick="filterCards('all')" >All</button>
+        
+        <button onclick="filterCards('dangerous')" >Dangerous</button>
+      
+      
+      <button onclick="filterCards('neutral')">Neutral</button> </div>
+   
+ </div>
+
+<div class="creature-list">
+
+<div class="creature-card dangerous"><img src="images/acromantula.jpg" alt="acromantula"> 
+<div class="card-body"><span class="rarity" style="color: purple;">Rare</span><div class="card-header"><h2>Acromantula</h2><span class="danger"> Dangerous</span> </div> 
+<div class="rating"> ⭐⭐⭐⭐⭐⭐⭐⭐ 8/10</div> <p>Giant spiders capable of human speech,known for their intelligence and deadly venom.They inhabit the 
+    Forbidden Forest in massive colonies. </p> <p class="habitat">🗺️ Habitat: Dark Forests</p>
+    <div class="tags"><span>Venomous Bite</span><span>Web Creation</span><span>Human Speech</span></div>
+</div>
+</div>
+
+<div class="creature-card dangerous"><img src="images/basilisk1.jpg" alt="basilisk"> 
+<div class="card-body"><span class="rarity" style="color: gold;">Legendary</span><div class="card-header"><h2>Basilisk</h2><span class="danger"> Dangerous</span> </div> 
+<div class="rating"> ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ 10/10</div> <p>The King of Serpents, whose gaze kills instantly and whose venom destroys almost anything
+    Born from a serpent's egg incubated by a cockerel. </p> <p class="habitat">🗺️ Habitat: Underground Chambers</p>
+    <div class="tags"><span>Killing Stare</span><span>Deadly Venom</span><span>Immense Size</span></div>
+</div>
+</div>
+
+<div class="creature-card neutral">
+        <img src="images/phoenix.jpg" alt="Phoenix">
+        <div class="card-body">
+          <span class="rarity" style="color: gold;">Legendary</span>
+          <div class="card-header">
+            <h2>Phoenix</h2><span class="neutra"> Neutral</span>
+          </div>
+          <div class="rating">⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️ 9/10</div>
+          <p>Magical birds that burst into flames and is reborn. It's tears have healing powers.Related to Dumbledores.</p>
+          <p class="habitat">🗺️ Habitat: Appear from somewhere.</p>
+          <div class="tags"><span>Rebirth</span><span>Healing</span><span>Fire ability</span></div>
+        </div>
+      </div>
+
+
+<div class="creature-card dangerous"><img src="images/dementor.jpg" alt="dementor"> 
+<div class="card-body"><span class="rarity" style="color: rgb(93, 0, 255);">Uncommon</span><div class="card-header"><h2>Dementor</h2><span class="danger"> Dangerous</span> </div> 
+<div class="rating"> ⭐⭐⭐⭐⭐⭐⭐⭐⭐ 9/10</div> <p> Soul-sucking creatures that drain happiness and hope from their victims.They guard <em>Azkaban</em> 
+prison and feed on positive emotions. </p> <p class="habitat">🗺️ Habitat: Azkaban Prison</p>
+    <div class="tags"><span>Soul Drain</span><span>Despair Inducement </span><span>Dementor's Kiss</span></div>
+</div>
+</div>
+
+<div class="creature-card neutral">
+        <img src="images/thestral1.jpg" alt="Thestral">
+        <div class="card-body">
+          <span class="rarity" style="color: gold;">Legendary</span>
+          <div class="card-header">
+            <h2>Thestral</h2><span class="neutra"> Neutral</span>
+          </div>
+          <div class="rating">⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️ 10/10</div>
+          <p>Only visible to those who've seen death. Misunderstood yet loyal flying creatures.</p>
+          <p class="habitat">🗺️ Habitat: Forvidden Forest</p>
+          <div class="tags"><span>Invisible</span><span>Flying Type</span><span>Loyal</span></div>
+        </div>
+      </div>
+
+
+<div class="creature-card dangerous">
+        <img src="images/horntail.jpg" alt="Hungarian Horntail">
+        <div class="card-body">
+          <span class="rarity" style="color: purple;">Rare</span>
+          <div class="card-header">
+            <h2>Hungarian Horntail</h2><span class="danger"> Dangerous</span>
+          </div>
+          <div class="rating">⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️ 9/10</div>
+          <p>A fierce dragon species with deadly fire and iron-like scales.</p>
+          <p class="habitat">🗺️ Habitat: Dragon Reserves</p>
+          <div class="tags"><span>Fire Breath</span><span>Flight</span><span>Dragon</span></div>
+        </div>
+      </div>
+
+
+       
+
+
+      <div class="creature-card dangerous">
+        <img style="object-fit: fill;" src="images/nundu.jpg" alt="Nundu">
+        <div class="card-body">
+          <span class="rarity" style="color: rgb(129, 17, 17);">Deadly</span>
+          <div class="card-header">
+            <h2>Nundu</h2><span class="danger"> Dangerous</span>
+          </div>
+          <div class="rating">⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️ 10/10</div>
+          <p>Giant leopard with breath that causes disease. Hardest beast to subdue.</p>
+          <p class="habitat">🗺️ Habitat: Africa</p>
+          <div class="tags"><span>Toxic Breath</span><span>Silent Stalker</span></div>
+        </div>
+    </div>
+
+    <div class="creature-card neutral">
+        <img style="object-fit: fill;height: 300px;"   src="images/Merperson.jpg" alt="Merperson">
+        <div class="card-body">
+          <span class="rarity" style="color: rgb(93, 0, 255);">Uncommon</span>
+          <div class="card-header">
+            <h2>Merperson</h2><span class="neutra"> Neutral</span>
+          </div>
+          <div class="rating">⭐️⭐️⭐️⭐️ 4/10</div>
+          <p>Water-dwelling magical humanoids. Known for their haunting songs and territorial ways.</p>
+          <p class="habitat">🗺️ Habitat: Black Lake </p>
+          <div class="tags"><span>Aquatic</span><span>Music</span><span>Ancient</span></div>
+        </div>
+      </div>
+
+      <div class="creature-card dangerous">
+        <img src="images/lethifold.jpg" alt="Lethifold">
+        <div class="card-body">
+          <span class="rarity">Stealth</span>
+          <div class="card-header">
+            <h2>Lethifold</h2><span class="danger"> Dangerous</span>
+          </div>
+          <div class="rating">⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️ 8/10</div>
+          <p>Dark shadowy cloak that glides silently, suffocates victims in sleep.</p>
+          <p class="habitat">🗺️ Habitat: Tropics</p>
+          <div class="tags"><span>Silent Kill</span><span>Darkness</span></div>
+        </div>
+      </div>
+
+      <div class="creature-card neutral">
+        <img src="images/hippogriff.jpg" alt="Hippogriff">
+        <div class="card-body">
+          <span class="rarity" style="color: purple;">Rare</span>
+          <div class="card-header">
+            <h2>Hippogriff</h2><span class="neutra"> Neutral</span>
+          </div>
+          <div class="rating">⭐️⭐️⭐️⭐️⭐️⭐️ 6/10</div>
+          <p>A proud noble beast. Half-eagle, half-horse. Must be approached with respect.</p>
+          <p class="habitat">🗺️ Habitat: Hogwarts' Grounds</p>
+          <div class="tags"><span>Flying</span><span>Proud</span><span>Fast</span></div>
+        </div>
+      </div>
+
+      <div class="creature-card dangerous">
+        <img src="images/boggart.jpg" alt="Boggart">
+        <div class="card-body">
+          <span class="rarity" style="color: green;">Common</span>
+          <div class="card-header">
+            <h2>Boggart</h2><span class="danger"> Dangerous</span>
+          </div>
+          <div class="rating">⭐️⭐️⭐️⭐️⭐️⭐️⭐️ 7/10</div>
+          <p>Shapeshifter that turns into your worst fear. Defeated by laughter.</p>
+          <p class="habitat">🗺️ Habitat: Closets & Dark Places</p>
+          <div class="tags"><span>Shapeshift</span><span>Fear Magic</span></div>
+        </div>
+      </div>
+
+      <div class="creature-card dangerous">
+        <img src="images/inferi.jpg" alt="Inferi">
+        <div class="card-body">
+          <span class="rarity">Dark</span>
+          <div class="card-header">
+            <h2>Inferi</h2><span class="danger"> Dangerous</span>
+          </div>
+          <div class="rating">⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️ 8/10</div>
+          <p>Dead bodies reanimated by dark magic. Feel no pain, no fear.</p>
+          <p class="habitat">🗺️ Habitat: Caves & Lakes</p>
+          <div class="tags"><span>Undead</span><span>Fire Weakness</span><span>Inhuman</span></div>
+        </div>
+      </div>
+
+      <div class="creature-card dangerous">
+        <img style="object-fit: fill; height: 300px;" src="images/troll.jpg" alt="Mountain Troll">
+        <div class="card-body">
+          <span class="rarity" style="color: green;">Common</span>
+          <div class="card-header">
+            <h2>Mountain Troll</h2><span class="danger"> Dangerous</span>
+          </div>
+          <div class="rating">⭐️⭐️⭐️⭐️⭐️⭐️ 6/10</div>
+          <p>Large, stupid, but immensely strong. Difficult to control.</p>
+          <p class="habitat">🗺️ Habitat: Mountains</p>
+          <div class="tags"><span>Strength</span><span>Slow</span></div>
+        </div>
+      </div>
+
+       <div class="creature-card dangerous">
+        <img src="images/werewolf.jpg" alt="Werewolf">
+        <div class="card-body">
+          <span class="rarity" style="color: darkred;">Cursed</span>
+          <div class="card-header">
+            <h2>Werewolf</h2><span class="danger"> Dangerous</span>
+          </div>
+          <div class="rating">⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️ 8/10</div>
+          <p>Humans cursed to transform into vicious wolves during a full moon.</p>
+          <p class="habitat">🗺️ Habitat: Forests</p>
+          <div class="tags"><span>Shapeshift</span><span>Full Moon</span></div>
+        </div>
+      </div>
+
+      <!-- Dangerous ones done here, below is neutral-->
+
+     
+
+      
+
+      
+
+      <div class="creature-card neutral">
+        <img src="images/unicorn.jpg" alt="Unicorn">
+        <div class="card-body">
+          <span class="rarity" style="color: purple;">Rare</span>
+          <div class="card-header">
+            <h2>Unicorn</h2><span class="neutra"> Neutral</span>
+          </div>
+          <div class="rating">⭐️⭐️⭐️⭐️⭐️ 5/10</div>
+          <p>Graceful creatures of purity. Their blood and hair hold powerful magical properties.</p>
+          <p class="habitat">🗺️ Habitat: Forests of Europe</p>
+          <div class="tags"><span>Pure</span><span>Magic Hair</span><span>Healing</span></div>
+        </div>
+      </div>
+
+
+      <div class="creature-card neutral">
+        <img src="images/centaur.jpg" alt="Centaur">
+        <div class="card-body">
+          <span class="rarity" style="color: rgb(93, 0, 255);">Uncommon</span>
+          <div class="card-header">
+            <h2>Centaur</h2><span class="neutra"> Neutral</span>
+          </div>
+          <div class="rating">⭐️⭐️⭐️⭐️ 4/10</div>
+          <p>Intelligent beings skilled in astronomy and archery.Keep their distance from wizards.</p>
+          <p class="habitat">🗺️ Habitat: Forbidden Forests </p>
+          <div class="tags"><span>Independent</span><span>Wise</span><span>Aschery</span></div>
+        </div>
+      </div>
+
+
+      
+
+
+       <div class="creature-card neutral">
+        <img style="height: 300px;" src="images/bowtruckle.jpg" alt="Bowtruckle">
+        <div class="card-body">
+          <span class="rarity" style="color: rgb(93, 0, 255);">Uncommon</span>
+          <div class="card-header">
+            <h2>Bowtruckle</h2><span class="neutra"> Neutral</span>
+          </div>
+          <div class="rating">⭐️⭐️⭐️ 3/10</div>
+          <p>Small tree gurdians that resemble twigs. Fierce when defending their home tree.</p>
+          <p class="habitat">🗺️ Habitat: Wand Wood Forsests </p>
+          <div class="tags"><span>Lockpicking</span><span>Woodland</span><span>Protective</span></div>
+        </div>
+      </div>
+
+
+       <div class="creature-card neutral">
+        <img  src="images/sniffer.jpg" alt="Niffler">
+        <div class="card-body">
+          <span class="rarity" style="color: green;">Common</span>
+          <div class="card-header">
+            <h2>Niffler</h2><span class="neutra"> Neutral</span>
+          </div>
+          <div class="rating">⭐️⭐️⭐️ 3/10</div>
+          <p>Adorable treasure-hunting creature. Loves shiny objects. Mischievos but harmless.</p>
+          <p class="habitat">🗺️ Habitat: Burrows </p>
+          <div class="tags"><span>Treasure hunt</span><span>Mischief</span><span>Collector</span></div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+</div>
+
+
+
+<footer id="footer" class="custom-footer">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <div class="logo-title">
+        <img src="images/Luna Logo Plain.jpg" alt="Luna Logo">
+      </div>
+      <h2>Luna Pioneers</h2>
+    <p>Explore magical lore, Hogwarts knowledge, and mytical creatures.<br> Crafted with passion by <strong> Luna Pioneers.</strong> </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Travel Links</h3>
+      <ul>
+        <li>
+          <a href="index.html" target="_blank">Home</a>
+        </li>
+        <li>
+          <a href="AboutUs.html" target="_blank">About us</a>
+        </li>
+        <li>
+          <a href="#footer">Contact</a>
+        </li>
+       
+        <li>
+          <a href="pj.html" target="_blank">World</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Most viewed</h3>
+      <ul>
+        <li>
+          <a href="newcreature.html" target="_self">Creatures</a>
+        </li>
+        <li>
+          <a href="#">Wands</a>
+        </li>
+        <li>
+          <a href="loarn.html" target="_blank">Characters</a>
+        </li>
+        <li>
+          <a href="#">Ravenclaw</a>
+        </li>
+        <li>
+          <a href="#">Spells</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Social Media</h3>
+
+      <div class="footer-socials">
+        
+          <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+        
+          <a href="#"><i class='bx bxs-videos'></i></a>
+        
+          <a href="#"><i class='bx bxl-discord'></i></a>
+        
+        
+          <a href="#"><i class='bx bxl-twitch'></i></a>
+        
+      </div>
+        
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Luna Pioneers | For educational use only. All rights belong to J.K. Rowling & Warner Bros.</p>
+  </div>
+</footer>
+
+
+<script>
+ 
+  function searchCreatures() {
+    const input = document.getElementById('search-input').value.toLowerCase();
+    const cards = document.querySelectorAll('.creature-card');
+
+    cards.forEach(card => {
+      const name = card.querySelector ('h2').textContent.toLowerCase();
+      card.style.display = name.includes(input) ? 'block' : 'none';
+    });
+  }
+
+
+
+
+
+
+  function filterCards(type) {
+    const cards = document.querySelectorAll ('.creature-card');
+
+    const buttons = document.querySelectorAll('.filter-buttons button');
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    event.target.classList.add('active');
+
+    cards.forEach (card => {
+      if (type == 'all'){
+        card.style.display = 'block';
+      }
+       else {
+        card.style.display = card.classList.contains(type) ? 'block' : 'none';
+       }
+    });
+  }
+</script>
+
+
+
+
+
+
+
+</body>
+
+</html>
