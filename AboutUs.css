@@ -195,7 +195,7 @@ nav ul a {
 .team-section {
     background-image: url(images/b4.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     padding: 80px 40px;
     text-align: center;
@@ -218,6 +218,44 @@ nav ul a {
     color: white;
 }
 
+@media screen and (max-width: 768px) {
+    .team-section {
+        background-size: cover;  
+        padding: 40px 15px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .side-section {
+        flex-direction: column;
+        gap: 30px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+
+    .side-img img {
+        width: 100%;   /* fits phone */
+        max-width: 300px;
+    }
+
+    .side-text h2 {
+        font-size: 30px;
+    }
+
+    .side-text p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-title, .team-title {
+        font-size: 36px;
+    }
+    .about-text,.team-text {
+        font-size: 18px;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+}
 
 
 @media screen and (max-width: 768px){
