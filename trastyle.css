@@ -1,0 +1,290 @@
+@font-face {
+  font-family: 'Dunbledor 1';
+  src: url('./fonts/dum1.ttf') format('truetype');
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family:'Dumbledor 1', sans-serif;
+    color: white;
+}
+
+.background-image {
+    background-image: url(images/HP_bg.webp);
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.85;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 10px #727fde, 0 0 20px rgba(114,127,222,0.6);
+}
+h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+}
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-top: 1rem;
+}
+
+.carousel-container {
+  position: relative;
+  width: 95%;
+  max-width: 900px;
+  height: 300px;
+  overflow: hidden;
+  margin: 30px auto 60px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #727fde80;
+  border: 2px solid rgba(114,127,222,0.6);
+}
+.carousel-slide {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  background: rgba(0,0,0,0.3);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.prev:hover, .next:hover {
+  background: #727fde;
+  box-shadow: 0 0 10px #727fde;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    border-radius: 30px;
+    border: 2px solid rgba(114,127,222,0.4);
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    margin: 1.5rem auto;
+    box-shadow: 0 0 15px rgba(114,127,222,0.3);
+}
+
+.navdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navdiv ul {
+    list-style: none;          
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.navdiv li {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar button {
+    font-family: 'Dumbledor 1';
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: lightgray;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: rgba(114,127,222,0.2);
+    border-color: rgba(114,127,222,0.6);
+    color: white;
+    text-shadow: 0 0 8px #727fde;
+}
+
+.navbar button.active {
+    background-color: #727fde;
+    color: white;
+    border-color: #727fde;
+    box-shadow: 0 0 10px #727fdeaa;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        width: 90%;
+        border-radius: 20px;
+        padding: 0.5rem;
+    }
+    .navdiv ul {
+        gap: 0.5rem;
+    }
+    .navbar button {
+        font-size: 1rem;
+        padding: 0.4rem 1rem;
+    }
+}
+
+.item_grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.card img {
+    display: block;       
+    margin: 0;            
+    padding: 0;           
+    border: none;         
+    width: 280px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(114,127,222,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover img {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #727fdeaa;
+}
+
+@media (max-width: 768px) {
+    .item_grid {
+        justify-content: center;
+    }
+    .card {
+        margin: 0 auto;
+        display: block;
+    }
+    .card img {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.img_button {
+  display: block;
+  line-height: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.img_button:focus { outline: none; }
+.img_button:focus-visible { outline: 2px solid #727fde; outline-offset: 2px; }
+
+.modal {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none; /* can't click when closed */
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.modal.open {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 999;
+}
+
+.modal-inner {
+    background-color: rgba(13, 13, 44, 0.95);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #727fdeaa;
+    padding: 2rem;
+    width: 90vw;
+    max-width: 800px;
+    max-height: 90%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-inner h2 {
+    color: #727fde;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.modal-inner p {
+    line-height: 1.6;
+    text-align: center;
+    font-size: 20px;
+}
+
+.modal-inner .btn {
+    margin-top: 2rem;
+}
+
+.btn {
+    font-family: 'Dumbledor 1';
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-size: 16pt;
+    background-color: #727fde;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    background-color: white;
+    color: #0a0c1a;
+    box-shadow: 0 0 15px #727fdeaa;
+}
+
+.page {
+    display: none;
+}
+.page.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 340px;
+    }
+}

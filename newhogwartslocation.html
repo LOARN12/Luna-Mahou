@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    
+    <title>Locations at Hogwarts</title>
+   
+    <style>
+       *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+        /*The Start of Luna Pioneers logo and nav */
+nav{
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.123);
+    backdrop-filter: blur(5px);
+    padding: 0 30px;
+    box-shadow: 0 0 15px #72a1de68;
+    z-index: 999;
+    
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+
+.left img{
+    width: 40px;
+    margin: 0 15px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    padding: 15px 15px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.30);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #727fde65;
+    cursor: pointer;
+}
+
+nav ul li {
+    list-style: none;
+}
+nav ul a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    margin: 0 10px;
+}
+
+.box-icons{
+    display: flex;
+    gap: 40px;
+}
+
+.box-icons a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #727fde;
+    text-decoration: none;
+    color: lightgray;
+    border-radius: 50%;
+    transition: 0.3s;
+
+}
+
+.box-icons a:hover{
+    background-color: #727fde;
+    color: black;
+    box-shadow: 0 0 15px #727fde6f;
+}
+
+
+@media (max-width: 768px){
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+        gap: 10px;
+    }
+
+    .left {
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin: 0;
+    }
+
+    nav ul a {
+        margin: 5px 10px;
+        font-size: 15px;
+    }
+
+    .box-icons {
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .box-icons a {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+}
+
+/*The End of Luna Pioneers logo and nav */
+
+
+      header{
+      position: relative;
+      width: 100%;
+      height: 400px; 
+      overflow: hidden;
+      background: url('https://i.pinimg.com/originals/5e/df/21/5edf2155bf401d9321cf67a184a916bc.gif') center center / cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: serif;
+        }
+
+
+    header .header-content {
+      position: relative;
+      z-index: 2; 
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding-top: 150px; 
+    }
+    
+   .glow-text{
+  color: rgb(185, 0, 0);
+  text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold;
+}
+
+.glow-text2{
+  color:cornsilk;
+  text-shadow: 0 0 10px rgb(255, 187, 0), 0 0 20px rgb(255, 166, 0), 0 0 30px rgb(255, 153, 0);
+}
+        
+       section{
+        height: 40%;
+        width: 100%;
+        color:cornsilk;
+        background-color: rgb(18, 12, 68);
+        background-image: url(images/b2.jpg);
+        padding: 8%;
+        padding-top: 2%;
+        padding-bottom: 3%;
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       }
+       
+       
+       .card-title{
+        font-weight: bold;
+       
+       }
+
+       .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(30, 85, 39, 0.911);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer; }
+
+    .card:hover {
+  transform: scale(1.2);
+  z-index: 10;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+    .card-img-top:hover {
+  box-shadow: 0 0 15px rgb(26, 82, 40);
+  transition: 0.3s;
+}
+
+       footer{
+        color: cornsilk;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-color: rgb(4, 12, 61);
+
+        /* The Start of Luna Pioneers footer */
+.custom-footer {
+    background-color: #0a0c1a;
+    color: lightgray;
+    padding: 40px 20px 0;
+    font-family: 'Inter', sans-serif;
+    border-top: 1px soled rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo .logo-title img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+
+.footer-col {
+    flex: 1 1 180px;
+    margin: 20px;
+}
+
+.footer-logo p{
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    color: #727fde;
+    padding-bottom: 15px;
+}
+
+.footer-col h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 15px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #aaa;
+    transition: 0.3s;
+    
+}
+
+.footer-col ul li a:hover {
+    color: white;
+    text-shadow: 0 0 10px #727fdeaa;
+}
+
+.footer-socials a{
+    display: inline-block;
+    font-size: 25px;
+    margin-right: 15px;
+    color: #727fde;
+    transition: transform 0.3s cubic-bezier(1, 1.56,0.64, 1), color 0.3s ease;
+}
+
+.footer-socials a:hover{
+    color: white;
+    text-shadow: 0 0 10px #727fde;
+    transform: translateY(-8px) rotate(-360deg);
+
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    background-color: rgb(13, 13, 44);
+    color: lightgray;
+}
+       }
+    /* The End of Luna Pioneers footer */
+
+    </style>
+
+</head>
+<body>
+
+
+    <header>
+      <h1 class="glow-text">Let's explore the places at Hogwarts!</h1>
+      <nav>
+            <div class="left">
+                <img src="images/Luna Logo Txt.jpg" alt="logo">
+                <h1><spam style="color: rgb(65, 65, 242);">LUNA PIONEERS</spam></h1>
+            </div>
+            <ul>
+               <a href="index.html" target="_parent">Home</a>
+        </li>
+        <li>
+          <a href="AboutUs.html" target="_blank">About us</a>
+        </li>
+        <li>
+          <a href="#footer">Contact</a>
+        </li>
+        
+        <li>
+          <a href="pj.html">World</a>
+        </li>
+                
+            </ul>
+            <div class="box-icons">
+                <a href="https://youtu.be/VO-df6nkLhc?list=RDVO-df6nkLhc&t=2"><i class='bx  bx-movie-play'  ></i> </a> 
+                <a href="#"><i class='bx  bx-message-minus'  ></i> </a>
+                <a href="#"><i class='bx bxl-facebook-circle'></i> </a>
+            </div>
+
+        </nav> <br> <br>
+
+    </header>
+
+    <section>
+        <h2 class="glow-text2">These are the most popular places at Hogwarts!</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+              <div class="card">
+                <img src="https://www.looper.com/img/gallery/if-harry-potter-has-to-reboot-follow-spielbergs-advice-make-it-animated/harry-potter-could-be-animated-in-so-many-different-ways-1681847940.jpg" class="card-img-top" alt="harry potter the great hall photo">
+                <div class="card-body">
+                  <h5 class="card-title">The Great Hall</h5>
+                  <p class="card-text">The Great Hall was Hogwarts' gathering place - located next to the Entrance Hall, students and teachers ate and congregated for events,
+                    most prominently the Hogwarts Sorting Ceremony.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <img src="https://wallpapers.com/images/hd/the-hogwarts-quidditch-pitch-1280-x-720-wallpaper-r1th6w82zxi1rhy1.jpg" class="card-img-top" alt="Quidditch pitch photo">
+                <div class="card-body">
+                  <h5 class="card-title">Quidditch pitch</h5>
+                  <p class="card-text">A standard Quidditch pitch was an oval shaped field with three hooped goal posts at either end and surrounded by stands.
+                    Hogwarts had its own pitch where house teams were able to train and compete in their own Quidditch Cup.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <img src="https://cdnb.artstation.com/p/assets/images/images/061/879/283/large/kai-hoyland-sequencemaster-0325.jpg?1681841859" class="card-img-top" alt="The Hogwarts library photo">
+                <div class="card-body">
+                  <h5 class="card-title">The Hogwarts Library</h5>
+                  <p class="card-text">The Hogwarts library contained many thousands of books, manuscripts and documents.
+                    Students were able to read and borrow most titles, although access to the Restricted Section was much more tightly regulated.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <img src="https://imgix.ranker.com/list_img_v2/18235/2778235/original/harry-potter-room-of-requirement-uses" class="card-img-top" alt="The room of requirement photo">
+                <div class="card-body">
+                  <h5 class="card-title">The Room of Requirement</h5>
+                  <p class="card-text">A magical room on the seventh floor of Hogwarts castle, the Room of Requirement appeared when students were in particular need of it and would provide whatever was required.
+                      Also known as the Come and Go Room, and Room of Hidden Things, it could be used for anything.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2019/07/Harry-Potter-Gryffindor-Common-Room-Feature.jpg" class="card-img-top" alt="Gryffindor common room photo">
+                <div class="card-body">
+                  <h5 class="card-title">The Gryffindor Common Room</h5>
+                  <p class="card-text">The Gryffindor common room could be found in Gryffindor Tower, and was accessible with a password given to the portrait of The Fat Lady.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <img src="https://preview.redd.it/xxvjfqf7meb71.jpg?width=640&crop=smart&auto=webp&s=3f8fdc322685aa8f70df98ac7848f6e0031723c3" class="card-img-top" alt="Slytherin common room photo">
+                <div class="card-body">
+                  <h5 class="card-title">The Slytherin Common Room</h5>
+                  <p class="card-text">Deep in the dungeons, the Slytherin common room was located behind a bare stretch of wall and required a password for entrance.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <img src="https://cdna.artstation.com/p/assets/images/images/008/818/044/large/nikki-blom-hcr06.jpg?1515504783" class="card-img-top" alt="Hufflepuff common room photo">
+                <div class="card-body">
+                  <h5 class="card-title">The Hufflepuff Common Room</h5>
+                  <p class="card-text">Close to the Hogwarts kitchens, the Hufflepuff common room was hidden behind a large pile of barrels.
+                    A cosy, low-ceilinged room decorated in yellow and black, the Hufflepuff common room was full of honey-coloured wood and thriving plants.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <img src="https://i.redd.it/raven-claw-common-room-in-hogwarts-legacy-v0-gj0lbimwk77c1.jpg?width=1920&format=pjpg&auto=webp&s=4b37f568098b240b297069db5a8a39a0575e0c4e" class="card-img-top" alt="Ravenclaw common room photo">
+                <div class="card-body">
+                  <h5 class="card-title">The Ravenclaw Common Room</h5>
+                  <p class="card-text">One of the airiest rooms at Hogwarts, the Ravenclaw common room was located at the top of Ravenclaw Tower, accessed by a spiral staircase.
+                    The entrance featured a bronze knocker in the shape of an eagle that required a riddle to be answered.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <footer id="footer" class="custom-footer">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <div class="logo-title">
+        <img src="images/Luna Logo Plain.jpg" alt="Luna Logo">
+      </div>
+      <h2>Luna Pioneers</h2>
+    <p>Explore magical lore, Hogwarts knowledge, and mytical creatures.<br> Crafted with passion by <strong> Luna Pioneers.</strong> </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Travel Links</h3>
+      <ul>
+        <li>
+          <a href="index.html" target="_blank">Home</a>
+        </li>
+        <li>
+          <a href="AboutUs.html" target="_blank">About us</a>
+        </li>
+        <li>
+          <a href="#footer">Contact</a>
+        </li>
+        
+        <li>
+          <a href="pj.html" target="_self">World</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Most viewed</h3>
+      <ul>
+        <li>
+          <a href="newcreature.html" target="_blank">Creatures</a>
+        </li>
+        <li>
+          <a href="Wizarding Wands.html" target="_blank" >Wands</a>
+        </li>
+        <li>
+          <a href="loarn.html" target="_blank">Characters</a>
+        </li>
+        <li>
+          <a href="#">Ravenclaw</a>
+        </li>
+        <li>
+          <a href="Spell.html" target="_blank" >Spells</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Social Media</h3>
+
+      <div class="footer-socials">
+        
+          <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+        
+          <a href="#"><i class='bx bxs-videos'></i></a>
+        
+          <a href="#"><i class='bx bxl-discord'></i></a>
+        
+        
+          <a href="#"><i class='bx bxl-twitch'></i></a>
+        
+      </div>
+        
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Luna Pioneers | For educational use only. All rights belong to J.K. Rowling & Warner Bros.</p>
+  </div>
+</footer>
+</body>
+</html>   

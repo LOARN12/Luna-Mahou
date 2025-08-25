@@ -167,6 +167,7 @@ nav ul a {
           float:none ;
         }
         .tab{
+            display: flex;
           margin-left:auto;
           margin-right:300px;
         }

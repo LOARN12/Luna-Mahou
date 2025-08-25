@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation</title>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="trastyle.css">
+    <style>
+        nav{
+            position: fixed;
+            display: flex;
+            top: 0;
+            right: 0;
+            left: 0;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+            background-color: rgba(255, 255, 255, 0.123);
+            backdrop-filter: blur(5px);
+            padding: 0 30px;
+            box-shadow: 0 0 15px #72a1de68;
+            z-index: 999;
+            
+        }
+
+        .left{
+            display: flex;
+            align-items: center;
+        }
+
+        .left img{
+            width: 40px;
+            margin: 0 15px;
+        }
+
+        nav ul{
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+            padding: 15px 15px;
+            border-radius: 50px;
+            background-color: rgba(0, 0, 0, 0.30);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 10px #727fde65;
+            cursor: pointer;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+        nav ul a {
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            margin: 0 10px;
+        }
+
+        .box-icons{
+            display: flex;
+            gap: 40px;
+        }
+
+        .box-icons a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            border: 2px solid #727fde;
+            text-decoration: none;
+            color: lightgray;
+            border-radius: 50%;
+            transition: 0.3s;
+
+        }
+
+        .box-icons a:hover{
+            background-color: #727fde;
+            color: black;
+            box-shadow: 0 0 15px #727fde6f;
+        }
+
+
+        @media (max-width: 768px){
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 20px;
+                gap: 10px;
+            }
+
+            .left {
+                justify-content: center;
+                width: 100%;
+            }
+
+            nav ul {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 10px;
+                margin: 0;
+            }
+
+            nav ul a {
+                margin: 5px 10px;
+                font-size: 15px;
+            }
+
+            .box-icons {
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            .box-icons a {
+                width: 28px;
+                height: 28px;
+                font-size: 16px;
+            }
+        }
+
+        /* This is end of Luna Pioneers logo and nav */
+
+
+        /* This is Luna Pioneers footer */
+        .custom-footer {
+            background-color: #0a0c1a;
+            color: lightgray;
+            padding: 40px 20px 0;
+            border-top: 1px soled rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-logo .logo-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-logo .logo-title img{
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+
+        .footer-top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: auto;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        }
+
+
+        .footer-col {
+            flex: 1 1 180px;
+            margin: 20px;
+        }
+
+        .footer-logo p{
+            font-size: 14px;
+            color: rgb(255, 255, 255);
+            margin-bottom: 15px;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            color: #727fde;
+            padding-bottom: 15px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul li a {
+            text-decoration: none;
+            color: #aaa;
+            transition: 0.3s;
+            
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            text-shadow: 0 0 10px #727fdeaa;
+        }
+
+        .footer-socials a{
+            display: inline-block;
+            font-size: 25px;
+            margin-right: 15px;
+            color: #727fde;
+            transition: transform 0.3s cubic-bezier(1, 1.56,0.64, 1), color 0.3s ease;
+        }
+
+        .footer-socials a:hover{
+            color: white;
+            text-shadow: 0 0 10px #727fde;
+            transform: translateY(-8px) rotate(-360deg);
+
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            background-color: rgb(13, 13, 44);
+            color: lightgray;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+            <div class="left">
+                <img src="images/Luna Logo Txt.jpg" alt="logo">
+                <h1><spam style="color: rgb(65, 65, 242);">LUNA PIONEERS</spam></h1>
+            </div>
+            <ul>
+               <a href="index.html" target="_parent">Home</a>
+        </li>
+        <li>
+          <a href="AboutUs.html" target="_blank">About us</a>
+        </li>
+        <li>
+          <a href="#footer">Contact</a>
+        </li>
+        
+        <li>
+          <a href="pj.html">World</a>
+        </li>
+                
+            </ul>
+            <div class="box-icons">
+                <a href="https://youtu.be/VO-df6nkLhc?list=RDVO-df6nkLhc&t=2"><i class='bx  bx-movie-play'  ></i> </a> 
+                <a href="#"><i class='bx  bx-message-minus'  ></i> </a>
+                <a href="#"><i class='bx bxl-facebook-circle'></i> </a>
+            </div>
+
+        </nav> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+    <h1 style="text-align: center;"> Transportation </h1>
+
+    <div class="carousel-container">
+        <div class="carousel-slide" id="carouselSlide">
+            <img src="images/Carousel/bg 4.gif" alt="Clone Last" />
+            <img src="images/Carousel/bg 1.gif" alt="bg_1" />
+            <img src="images/Carousel/bg 2.gif" alt="bg_2" />
+            <img src="images/Carousel/bg 3.gif" alt="bg_3" />
+            <img src="images/Carousel/bg 4.gif" alt="bg_4" />
+            <img src="images/Carousel/bg 1.gif" alt="Clone First" />
+        </div>
+            <button class="prev" onclick="moveSlide(-1)">❮</button>
+            <button class="next" onclick="moveSlide(1)">❯</button>
+    </div>
+
+
+    <div class="navbar">
+        <div class="navdiv">
+            <ul>
+                <li><button onclick="showPage('vehicle')" class="active">Vehicles</button></li>
+                <li><button onclick="showPage('teleportation')">Teleportation</button></li>
+                <li><button onclick="showPage('portkeys')">Portkeys</button></li>
+                <li><button onclick="showPage('creatures')">Creatures</button></li>
+            </ul>
+        </div>
+    </div>  
+
+    <div class="background-image"></div>
+
+    <section id="vehicle" class="page active">
+        <h2 style="text-align: center;">Vehicles</h2>
+        <div class="item_grid">
+            
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal1">
+                    <img src="images/Vehicle/Hogwarts_Express.webp" alt="Hogwarts_express">
+                </button>
+                <div class="modal" id="modal1">
+                    <div class="modal-inner">
+                        <h2>Hogwarts Express</h2>
+                        <p>The Hogwarts Express is a magical train that transports students to Hogwarts School of Witchcraft and Wizardry. Departing from Platform 9¾ at King's Cross Station in London, it makes the journey to the hidden Hogwarts Castle in Scotland. The train is a symbol of the magical world's charm and mystery, offering students a warm welcome back to school each year. Inside, the carriages are cozy, and the trolley serves treats like Chocolate Frogs and Bertie Bott’s Every Flavor Beans. For many, the ride on the Hogwarts Express marks the beginning of countless magical adventures.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal2">
+                    <img src="images/Vehicle/Broomsticks.webp" alt="broomstick">
+                </button>
+                <div class="modal" id="modal2">
+                    <div class="modal-inner">
+                        <h2>Broomsticks</h2>
+                        <p>Broomsticks are the most iconic form of magical transportation, used by witches and wizards to fly through the air. They are also essential in the wizarding sport of Quidditch. Different models offer varying speeds and handling, with famous ones like the Nimbus 2000 and the Firebolt. Harry receives his first broomstick, the Nimbus 2000, in his first year at Hogwarts, allowing him to join the Gryffindor Quidditch team. Flying a broomstick requires skill and balance, and it's a common part of a magical education for young witches and wizards.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal3">
+                    <img src="images/Vehicle/Boats.png" alt="Boats">
+                </button>
+                <div class="modal" id="modal3">
+                    <div class="modal-inner">
+                        <h2>Boats</h2>
+                        <p>In their first year at Hogwarts, first-year students travel across the Black Lake to reach the castle for the very first time. They ride in small, enchanted boats that glide smoothly and silently over the water, creating a magical and memorable introduction to the wizarding world. This journey by boat helps build excitement and wonder as the young witches and wizards catch their first glimpse of the majestic Hogwarts castle.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card"> 
+                <button class="img_button open-modal" data-modal-target="modal4">
+                <img src="images/Vehicle/Flying_car.avif" alt="Flying_car">
+                </button>
+                <div class="modal" id="modal4">
+                    <div class="modal-inner">
+                        <h2>Flying Car</h2>
+                        <p>The flying car is a magical enchanted vehicle that can soar through the air. Most famously, the Weasley family owns a bright turquoise Ford Anglia that Arthur Weasley magically modified to fly and become invisible. The flying car is used by Ron and Harry in *Harry Potter and the Chamber of Secrets* to travel to Hogwarts when they miss the Hogwarts Express, leading to an adventurous and memorable journey. It represents a unique blend of Muggle technology and wizarding magic.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card"> 
+                <button class="img_button open-modal" data-modal-target="modal5">
+                <img src="images/Vehicle/Knight_bus.png" alt="Knight_bus">
+                </button>
+                <div class="modal" id="modal5">
+                    <div class="modal-inner">
+                        <h2>Knight Bus</h2>
+                        <p>The Knight Bus is a magical, triple-decker purple bus that provides emergency transportation for stranded witches and wizards in the Harry Potter series. It appears when summoned by holding out a wand and travels at incredible speeds, weaving through traffic and squeezing through impossibly narrow spaces. Inside, it’s equipped with beds for nighttime journeys and armchairs during the day. Though the ride is bumpy and wild, the Knight Bus is a reliable option for magical travel, especially for those in urgent need, like when Harry uses it in *The Prisoner of Azkaban*.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card"> 
+                <button class="img_button open-modal" data-modal-target="modal6">
+                <img src="images/Vehicle/Flying_motorbike.avif" alt="Flying_motorbike">
+                </button>
+                <div class="modal" id="modal6">
+                    <div class="modal-inner">
+                        <h2>Flying Motorbike</h2>
+                        <p>The flying motorbike is a magical vehicle originally owned by Sirius Black and later given to Hagrid. It looks like a regular motorcycle but is enchanted to fly, carry heavy loads, and even emit a shield for protection. Hagrid famously uses it to deliver baby Harry to the Dursleys and again during the escape from Privet Drive in *The Deathly Hallows*. Modified by Arthur Weasley, the bike is equipped with special features like ejector seats and a dragon-fire booster, making it a powerful and memorable mode of magical transport.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal7">
+                <img src="images/Vehicle/Gringotts Mine Carts.webp" alt="Mine Carts">
+                </button> 
+                <div class="modal" id="modal7">
+                    <div class="modal-inner">
+                        <h2>Mine Carts</h2>
+                        <p>At Gringotts Wizarding Bank, mine carts are used to transport witches and wizards swiftly through the vast underground tunnels that lead to the vaults. These enchanted carts speed along rails, often twisting and turning at high speeds, making the ride both exciting and a bit nerve-wracking. The mine carts are an essential part of the bank’s security system, allowing quick access while protecting the valuable treasures stored deep beneath the surface.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card"> 
+                <button class="img_button open-modal" data-modal-target="modal8">
+                <img src="images/Vehicle/Flying Carriage (Beauxbatons).png" alt="Beauxbatons">
+                </button>
+                <div class="modal" id="modal8">
+                    <div class="modal-inner">
+                        <h2>Beauxbatons</h2>
+                        <p>In The Goblet of Fire, the flying carriages are magical vehicles used to transport students from the Hogwarts Express train station to the castle. Pulled by giant, winged horses called Thestrals, these carriages soar silently through the air, providing a mysterious but safe ride. The carriages symbolize a step into the magical world, especially since Thestrals can only be seen by those who have witnessed death, adding a deeper layer of meaning to the journey.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card"> 
+                <button class="img_button open-modal" data-modal-target="modal9">
+                <img src="images/Vehicle/Durmstrang Ship.png" alt="Durmstrang Ship">
+                </button>
+                <div class="modal" id="modal9">
+                    <div class="modal-inner">
+                        <h2>Durmstrang Ship</h2>
+                        <p>In The Goblet of Fire, the Durmstrang ship is a large, dark, and imposing magical vessel that transports the Durmstrang Institute students to Hogwarts for the Triwizard Tournament. Unlike the Hogwarts Express, the ship sails through the air and over the sea, creating a mysterious and somewhat eerie arrival. The ship’s appearance reflects Durmstrang’s secretive and strict nature, making it a striking contrast to the more familiar wizarding transportation methods.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="portkeys" class="page">
+        <h2 style="text-align: center;">Portkeys</h2>
+
+        <div class="item_grid">
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal10">
+                    <img src="images/Portkeys/Old_boot.avif" alt="Old_boot">
+                </button>
+                <div class="modal" id="modal10">
+                    <div class="modal-inner">
+                        <h2>Old Boot</h2>
+                        <p>The Goblet of Fire, an old boot is used as a Portkey—a magical object enchanted to instantly transport anyone who touches it to a specific location. Though it looks like a regular, worn-out boot, it plays a key role in transporting Harry, the Weasleys, and others to the Quidditch World Cup. Portkeys can be made from any ordinary item and are often used for group travel, especially when Apparition isn't practical. This magical form of transportation is both efficient and surprising, turning everyday objects into powerful travel tools.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal11">
+                    <img src="images/Portkeys/Triwizard_cup.avif" alt="Triwizard_cup">
+                </button>
+                <div class="modal" id="modal11">
+                    <div class="modal-inner">
+                        <h2>Triwizard Cup</h2>
+                        <p>Portkeys are enchanted objects that transport anyone who touches them to a specific location. They can be anything—old boots, ropes, or even trash—making them easy to disguise. Portkeys are often used for group travel or to reach hidden or faraway places quickly. The sensation of using a Portkey is described as being pulled by a hook behind the navel. While effective, Portkeys can be disorienting, and their use is regulated by the Ministry of Magic to prevent unauthorized travel.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="creatures" class="page">
+        <h2 style="text-align: center;">Creatures</h2>
+
+        <div class="item_grid">
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal12">
+                    <img src="images/Creatures/Thestrals.png" alt="Thestrals">
+                </button>
+                <div class="modal" id="modal12">
+                    <div class="modal-inner">
+                        <h2>Thestrals</h2>
+                        <p>Thestrals are magical, winged horses with a skeletal appearance and black, leathery skin. They are invisible to most people and can only be seen by those who have witnessed death firsthand. Though they look frightening, Thestrals are gentle and loyal creatures. They play an important role in the series by helping Harry and his friends travel quickly, especially in *Harry Potter and the Order of the Phoenix* when they pull the carriages to Hogwarts.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal13">
+                    <img src="images/Creatures/Hippogriffs.avif" alt="Hippogriffs">
+                </button>
+                <div class="modal" id="modal13">
+                    <div class="modal-inner">
+                        <h2>Hippogriffs</h2>
+                        <p>Hippogriffs are majestic magical creatures with the front half of an eagle and the hind half of a horse. They are proud and proud-hearted beings that demand respect—anyone approaching a hippogriff must bow first and wait for it to bow back to avoid offense. Buckbeak is the most famous hippogriff in the series, known for his loyalty and bravery. Hippogriffs can fly swiftly and are used by Harry and his friends for transportation and in important moments throughout the story.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal14">
+                    <img src="images/Creatures/Dragon.png" alt="Dragon">
+                </button>
+                <div class="modal" id="modal14">
+                    <div class="modal-inner">
+                        <h2>Dragon</h2>
+                        <p>In The Deathly Hallows, Harry, Hermione, and Ron escape from Gringotts Wizarding Bank by riding a fierce Ukrainian Ironbelly dragon that guards the high-security vaults. After breaking into the vault, they release the dragon, which breaks free and carries them on its back as they fly out of the bank, fleeing from the pursuing goblins and security. This daring escape is thrilling and dangerous, showcasing their bravery and quick thinking.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal15">
+                    <img src="images/Creatures/Centaurs.JPG.webp" alt="Centaurs">
+                </button>
+                <div class="modal" id="modal15">
+                    <div class="modal-inner">
+                        <h2>Centaurs</h2>
+                        <p>Centaurs are magical creatures with the upper body of a human and the lower body of a horse. They are known for their intelligence, pride, and deep connection to nature and the stars. Living in the Forbidden Forest near Hogwarts, centaurs like Firenze play important roles in the story. Although they usually avoid human affairs, Firenze chooses to help Harry and even teaches Divination at Hogwarts. Centaurs value independence and wisdom, often reading the future in the stars and holding a strong sense of honor and tradition.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal16">
+                    <img src="images/Creatures/Abraxans.webp" alt="Abraxans">
+                </button>
+                <div class="modal" id="modal16">
+                    <div class="modal-inner">
+                        <h2>Abraxans</h2>
+                        <p>Abraxans are massive, powerful winged horses known for their strength and elegance. They are described as giant, palomino-colored creatures with gleaming coats and enormous wings. These magical horses are used to pull the flying carriage of Beauxbatons Academy of Magic, as seen in *Harry Potter and the Goblet of Fire*. Abraxans require special care and only respond to skilled handlers, often being fed a strict diet of single malt whiskey. Their majestic appearance and ability to fly make them one of the most impressive magical creatures in the wizarding world.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="teleportation" class="page">
+        <h2 style="text-align: center;">Teleportation</h2>
+        
+        <div class="item_grid">
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal17">
+                    <img src="images/Teleportation/Apparition.gif" alt="Apparition">
+                </button>
+                <div class="modal" id="modal17">
+                    <div class="modal-inner">
+                        <h2>Apparitions</h2>
+                        <p>Apparition is a magical form of teleportation, allowing witches and wizards to instantly travel from one place to another. It requires intense concentration and a clear destination in mind. Learning to Apparate is challenging and risky, as mistakes can lead to "splinching"—leaving parts of the body behind. Only those over seventeen can legally obtain an Apparition license. Despite its difficulty, it’s a fast and useful way to travel, often used by skilled witches and wizards in urgent situations.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal18">
+                    <img src="images/Teleportation/Floo_nework.gif" alt="Floo Network">
+                </button>
+                <div class="modal" id="modal18">
+                    <div class="modal-inner">
+                        <h2>Floo Network</h2>
+                        <p>The Floo Network is a magical transportation system that allows witches and wizards to travel between fireplaces connected to the network. To use it, a person simply steps into a lit fireplace, throws down Floo Powder, clearly states their destination, and is whisked away in a swirl of green flames. It's commonly used for travel within the wizarding world, especially between homes and places like the Ministry of Magic. However, speaking clearly is important—otherwise, travelers can end up in the wrong place, as Harry once did.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal19">
+                    <img src="images/Teleportation/Vanishing_cabinet.jpg" alt="Vanishing_cabinet">
+                </button>
+                <div class="modal" id="modal19">
+                    <div class="modal-inner">
+                        <h2>Vanishing Cabinet</h2>
+                        <p>The Vanishing Cabinet is a magical object that allows instant travel between two linked cabinets. When a person steps into one cabinet, they disappear and reappear in the other, no matter how far apart they are. Originally introduced as a mysterious piece of furniture, it becomes crucial in *The Half-Blood Prince*, when Draco Malfoy uses it to smuggle Death Eaters into Hogwarts. The Vanishing Cabinet is powerful but complex magic, and it only works properly when both cabinets are whole and correctly connected.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal20">
+                    <img src="images/Teleportation/Time_turneravif.avif" alt="Time Turner">
+                </button>
+                <div class="modal" id="modal20">
+                    <div class="modal-inner">
+                        <h2>Time Turner</h2>
+                        <p>The Time-Turner is a magical device that allows the wearer to travel back in time. It looks like a small hourglass on a chain and must be used with great caution, as interfering with the past can have serious consequences. Hermione Granger uses a Time-Turner in *The Prisoner of Azkaban* to attend multiple classes at once and later to help save Sirius Black and Buckbeak. Time-Turners are strictly regulated by the Ministry of Magic and are rarely issued due to the dangers of time travel.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal21">
+                    <img src="images/Teleportation/House_elf_magic.webp" alt="House-Elf Magic">
+                </button>
+                <div class="modal" id="modal21">
+                    <div class="modal-inner">
+                        <h2>House-elf Magic</h2>
+                        <p>House-elf magic is unique and powerful, often differing from wizard magic. House-elves can perform spells without wands and can Apparate in and out of places where wizards cannot, like Hogwarts. Despite being treated as servants by many wizarding families, house-elves possess strong magical abilities, as shown by Dobby and Kreacher. Their magic is tied closely to their loyalty and emotions, and though underestimated, they can be incredibly effective and brave, especially when protecting those they care about.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal22">
+                    <img src="images/Teleportation/Toilets.webp" alt="Toilets">
+                </button>
+                <div class="modal" id="modal22">
+                    <div class="modal-inner">
+                        <h2>Toilets</h2>
+                        <p>In the wizarding world, certain magical toilets serve as secret transportation portals. For example, the toilets at Hogwarts and other locations sometimes connect to hidden passages or lead to the Ministry of Magic via the Floo Network. One famous example is the Ministry’s visitor entrance through a bathroom, where flushing the toilet transports a person directly inside. This unusual form of travel highlights the playful and inventive nature of magical transportation in Harry Potter.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <button class="img_button open-modal" data-modal-target="modal23">
+                    <img src="images/Teleportation/Phoneboothpng.png" alt="Phone-booth">
+                </button>
+                <div class="modal" id="modal23">
+                    <div class="modal-inner">
+                        <h2>Phone-booth</h2>
+                        <p>A magical phone booth is used as a secret entrance to the Ministry of Magic. Unlike ordinary phone booths, this enchanted one transports witches and wizards instantly to the Ministry’s visitor entrance when the correct number is dialed. It offers a discreet and convenient way to enter the magical government building, blending an everyday Muggle object with wizarding magic for effective hidden travel.</p>
+                        
+                        <button class="btn close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    <script src="trascript.js"></script>
+
+    <footer id="footer" class="custom-footer">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <div class="logo-title">
+        <img src="images/Luna Logo Plain.jpg" alt="Luna Logo">
+      </div>
+      <h2>Luna Pioneers</h2>
+    <p>Explore magical lore, Hogwarts knowledge, and mytical creatures.<br> Crafted with passion by <strong> Luna Pioneers.</strong> </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Travel Links</h3>
+      <ul>
+        <li>
+          <a href="index.html" target="_blank">Home</a>
+        </li>
+        <li>
+          <a href="AboutUs.html" target="_blank">About us</a>
+        </li>
+        <li>
+          <a href="#footer">Contact</a>
+        </li>
+        
+        <li>
+          <a href="pj.html" target="_self">World</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Most viewed</h3>
+      <ul>
+        <li>
+          <a href="newcreature.html" target="_blank">Creatures</a>
+        </li>
+        <li>
+          <a href="Wizarding Wands.html" target="_blank" >Wands</a>
+        </li>
+        <li>
+          <a href="loarn.html" target="_blank">Characters</a>
+        </li>
+        <li>
+          <a href="#">Ravenclaw</a>
+        </li>
+        <li>
+          <a href="Spell.html" target="_blank" >Spells</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Social Media</h3>
+
+      <div class="footer-socials">
+        
+          <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+        
+          <a href="#"><i class='bx bxs-videos'></i></a>
+        
+          <a href="#"><i class='bx bxl-discord'></i></a>
+        
+        
+          <a href="#"><i class='bx bxl-twitch'></i></a>
+        
+      </div>
+        
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Luna Pioneers | For educational use only. All rights belong to J.K. Rowling & Warner Bros.</p>
+  </div>
+</footer>
+
+</body>
+</html>
