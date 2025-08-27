@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harry Potter Events & Holidays</title>
+  <link rel="stylesheet" href="simple.css">
+   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
+</head>
+<body>
+  <header>
+    <!-- Navbar -->
+     <nav>
+            <div class="left">
+                <img src="images/Luna Logo Txt.jpg" alt="logo">
+                <h1><spam style="color: rgb(65, 65, 242);">LUNA PIONEERS</spam></h1>
+            </div>
+            <ul>
+               <a href="index.html" target="_parent">Home</a>
+        </li>
+        <li>
+          <a href="AboutUs.html" target="_blank">About us</a>
+        </li>
+        <li>
+          <a href="#footer">Contact</a>
+        </li>
+        
+        <li>
+          <a href="pj.html">World</a>
+        </li>
+                
+            </ul>
+            <div class="box-icons">
+                <a href="https://youtu.be/VO-df6nkLhc?list=RDVO-df6nkLhc&t=2"><i class='bx  bx-movie-play'  ></i> </a> 
+                <a href="#"><i class='bx  bx-message-minus'  ></i> </a>
+                <a href="#"><i class='bx bxl-facebook-circle'></i> </a>
+            </div>
+
+        </nav> <br> <br>
+
+    <!-- Title -->
+    <hr class="divider">
+    <div class="main-title" id="home">
+      <h1>EVENTS & HOLIDAYS</h1>
+    </div>
+
+    <!-- Events Gallery -->
+    <div class="gallery" id="events">
+      <div class="card" onclick="openModal(0)">
+        <img src="https://contentful.harrypotter.com/usf1vwtuqyxm/6A08sdScKsgwIOAG2Ow6K8/822e8778e44e7a1faeee2d3e7fc9b3c8/MinervaMcGonagall_PM_B1C7M2_HarryPotterBeingSortedInGreatHall_Moment.jpg" alt="Sorting Ceremony">
+        <div class="caption">Sorting Ceremony</div>
+      </div>
+      <div class="card" onclick="openModal(1)">
+        <img src="https://geekdad.com/wp-content/uploads/2016/12/YuleBallDance.jpg" alt="Yule Ball">
+        <div class="caption">Yule Ball</div>
+      </div>
+      <div class="card" onclick="openModal(2)">
+        <img src="https://colinsreview.com/wp-content/uploads/2024/01/Harry-Potter-and-the-Chamber-of-Secrets.png" alt="Quidditch Match">
+        <div class="caption">Quidditch Match</div>
+      </div>
+      <div class="card" onclick="openModal(3)">
+        <img src="https://i.pinimg.com/736x/e1/1f/98/e11f9867ba944e80196b7c7021e7861f.jpg" alt="Halloween Feast">
+        <div class="caption">Halloween Feast</div>
+      </div>
+      <div class="card" onclick="openModal(4)">
+        <img src="https://cdn.squaremeal.co.uk/article/10746/images/christmas-dinner-great-hall-warner-bros_25072024024346.jpg?w=913&auto=format%2Ccompress" alt="Christmas Feast">
+        <div class="caption">Christmas Feast</div>
+      </div>
+      <div class="card" onclick="openModal(5)">
+        <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/08/triwizard-tournament.jpg" alt="Triwizard Tournament">
+        <div class="caption">Triwizard Tournament</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-box">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-title" id="modalTitle"></div>
+      <img id="modalImg">
+      <div class="modal-caption" id="caption"></div>
+      <div class="modal-nav">
+        <button class="prev" onclick="changeSlide(-1)">&#10094; Previous</button>
+        <button class="next" onclick="changeSlide(1)">Next &#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="info-section">
+    <h2>About Hogwarts Events</h2>
+    <p><em>Hogwarts hosts many traditional and magical events throughout the year. From the Sorting Ceremony to the Triwizard Tournament, every moment is filled with wonder.</em></p>
+  </section>
+
+  <!-- Celebrations Section -->
+  <section id="celebrations" class="info-section">
+    <h2>Celebrations</h2>
+    <p><em>Hogwarts is filled with magical celebrations throughout the year such as Halloween, Christmas, Quidditch matches, and the Triwizard Tournament.</em></p>
+  </section>
+
+<footer id="footer" class="custom-footer">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <div class="logo-title">
+        <img src="images/Luna Logo Plain.jpg" alt="Luna Logo">
+      </div>
+      <h2>Luna Pioneers</h2>
+    <p>Explore magical lore, Hogwarts knowledge, and mytical creatures.<br> Crafted with passion by <strong> Luna Pioneers.</strong> </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Travel Links</h3>
+      <ul>
+        <li>
+          <a href="index.html" target="_blank">Home</a>
+        </li>
+        <li>
+          <a href="AboutUs.html" target="_blank">About us</a>
+        </li>
+        <li>
+          <a href="#footer">Contact</a>
+        </li>
+        
+        <li>
+          <a href="pj.html" target="_self">World</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Most viewed</h3>
+      <ul>
+        <li>
+          <a href="newcreature.html" target="_blank">Creatures</a>
+        </li>
+        <li>
+          <a href="Wizarding Wands.html" target="_blank" >Wands</a>
+        </li>
+        <li>
+          <a href="loarn.html" target="_blank">Characters</a>
+        </li>
+        <li>
+          <a href="#">Ravenclaw</a>
+        </li>
+        <li>
+          <a href="Spell.html" target="_blank" >Spells</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Social Media</h3>
+
+      <div class="footer-socials">
+        
+          <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+        
+          <a href="#"><i class='bx bxs-videos'></i></a>
+        
+          <a href="#"><i class='bx bxl-discord'></i></a>
+        
+        
+          <a href="#"><i class='bx bxl-twitch'></i></a>
+        
+      </div>
+        
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Luna Pioneers | For educational use only. All rights belong to J.K. Rowling & Warner Bros.</p>
+  </div>
+</footer>
+
+
+  <script src="simple.js"></script>
+</body>
+</html>
