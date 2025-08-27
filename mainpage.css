@@ -397,6 +397,7 @@ header ul a {
 .hero-vid-box{
     position: absolute;
     right: 3%;
+    mix-blend-mode: lighten;
 }
 
 .hero-vid-box video{
