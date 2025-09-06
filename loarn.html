@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hogwarts Characters</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon,2.ico">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Lora:ital@0;1&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!--Favicon-->  <link rel="icon" type="image/x-icon" href="images/favicon,2.ico">
     
     <!-- Boxicons CSS -->
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
 
+    
     <style>
         /* --- General Reset & Styles --- */
         * {
@@ -72,91 +75,137 @@
         }
         
         /* --- Luna Pioneers Navigation Bar --- */
-        nav{
-            
-            position: fixed;
-            display: flex;
-            top: 0;
-            right: 0;
-            left: 0;
-            align-items: center;
-            justify-content: space-between;
-            height: 60px;
-            background-color: rgba(255, 255, 255, 0.123);
-            backdrop-filter: blur(5px);
-            padding: 0 30px;
-            box-shadow: 0 0 15px #72a1de68;
-            z-index: 999;
-             
-        }
+      /* NAVBAR MAIN CONTAINER */
+nav {
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.123);
+    backdrop-filter: blur(5px);
+    padding: 0 30px;
+    box-shadow: 0 0 15px #72a1de68;
+    z-index: 999;
+    font-family: "Inter", sans-serif; /* keeps font consistent */
+}
 
-        .left{
-            display: flex;
-            align-items: center;
-        }
+/* LEFT SECTION */
+nav .left {
+    display: flex;
+    align-items: center;
+}
 
-        .left img{
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-            margin: 0 15px;
-        }
-        
-        /* NAV LOGO TEXT STYLE */
-        nav .left h1 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.4rem;
-            color: #410eb9;
-        }
+nav .left h1{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+     font-family: "Inter", sans-serif; 
+}
 
-        nav ul{
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            list-style: none;
-            width: 40%;
-            padding: 10px 15px;
-            border-radius: 50px;
-            background-color: rgba(0, 0, 0, 0.30);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 10px #727fde65;
-            cursor: pointer;
-           
-        }
+nav .left img {
+    width: 40px;
+    margin: 0 15px;
+}
 
-        nav ul a {
-            text-decoration: none;
-            color: white;
-            font-weight: 700;
-            margin: 0 10px;
-            font-family: 'Lora', serif;
-        }
+/* MENU LIST */
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    padding: 15px 15px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.30);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #727fde65;
+    cursor: pointer;
+}
 
-        .box-icons{
-            display: flex;
-            gap: 25px;
-        }
+nav ul li {
+    list-style: none;
+}
 
-        .box-icons a{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            width: 35px;
-            height: 35px;
-            border: 2px solid #727fde;
-            text-decoration: none;
-            color: lightgray;
-            border-radius: 50%;
-            transition: 0.3s;
-        }
+nav ul a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    margin: 0 10px;
+    font-family: inherit; /* force to use nav font */
+}
 
-        .box-icons a:hover{
-            background-color: #727fde;
-            color: black;
-            box-shadow: 0 0 15px #727fde6f;
-        }
-        
+/* ICON BOXES */
+nav .box-icons {
+    display: flex;
+    gap: 40px;
+}
+
+nav .box-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #727fde;
+    text-decoration: none;
+    color: lightgray;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+nav .box-icons a:hover {
+    background-color: #727fde;
+    color: black;
+    box-shadow: 0 0 15px #727fde6f;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+        gap: 10px;
+    }
+
+    nav .left {
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin: 0;
+    }
+
+    nav ul a {
+        margin: 5px 10px;
+        font-size: 15px;
+    }
+
+    nav .box-icons {
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    nav .box-icons a {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+}
+
+
+
+/* This is end of Luna Pioneers logo and nav */
         /* --- Main Content Layout --- */
         main { 
             max-width: 1100px; 
@@ -224,171 +273,119 @@
         .flying-heart { position: fixed; font-size: 20px; z-index: 1002; animation: fly-up 2s ease-out forwards; pointer-events: none; }
         @keyframes fly-up { 0% { opacity: 1; transform: translate(0, 0) scale(1); } 100% { opacity: 0; transform: translate(var(--x-end), var(--y-end)) scale(0.5) rotate(720deg); } }
 
-        /* --- New Luna Pioneers Footer --- */
-        .custom-footer {
-            background-color: #0a0c1a;
-            color: lightgray;
-            padding: 40px 20px 0;
-            font-family: 'Inter', sans-serif;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            
-        }
-
-        .footer-top {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            max-width: 1100px;
-            margin: auto;
-            padding-bottom: 30px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        
-        .footer-col.footer-logo {
-    display: flex;
-    align-items: flex-start;
-    gap: 50px;
-    line-height: 1.5;
+        /* This is Luna Pioneers footer */
+.custom-footer {
+    background-color: #0a0c1a;
+    color: lightgray;
+    padding: 40px 20px 0;
     font-family: 'Inter', sans-serif;
-    margin-top: 20px;
-    margin-left: 57px;
-
-
-   
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-logo-img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    margin-top: -35px; 
-    line-height: 1.5;
-}
-
-.footer-title {
-    font-size: 1.6rem;
-    color: #727fde;
-    margin: 4px 0 6px 0; 
-     font-family: 'Inter', sans-serif;
-     padding: auto;
-      margin-top: 20px;
-}
-
-.footer-desc {
-    font-size: 12px;
-    color: #ffffff;
-    white-space: nowrap;
-    margin-top: 20px;
-}
-
-.footer-crafted {
-    font-size: 12px;
-    color: #fffefe;
-    line-height: 1.5;
-    
-}
-
-.footer-top {
+.custom-footer .footer-logo .logo-title {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    max-width: 11000px;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom-footer .footer-logo .logo-title img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.custom-footer .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
     margin: auto;
     padding-bottom: 30px;
-    gap: 80px; 
-   
-    
-    
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.custom-footer .footer-col {
+    flex: 1 1 180px;
+    margin: 20px;
+}
+
+.custom-footer .footer-logo p {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+}
+
+.custom-footer .footer-logo h2 {
+    font-size: 28px;
+    color: #727fde;
+    padding-bottom: 15px;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.custom-footer .footer-col h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.custom-footer .footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-footer .footer-col ul li {
+    margin-bottom: 15px;
+}
+
+.custom-footer .footer-col ul li a {
+    text-decoration: none;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.custom-footer .footer-col ul li a:hover {
+    color: white;
+    text-shadow: 0 0 10px #727fdeaa;
+}
+
+.custom-footer .footer-socials a {
+    display: inline-block;
+    font-size: 25px;
+    margin-right: 15px;
+    color: #727fde;
+    transition: transform 0.3s cubic-bezier(1, 1.56,0.64, 1), color 0.3s ease;
+}
+
+.custom-footer .footer-socials a:hover {
+    color: white;
+    text-shadow: 0 0 10px #727fde;
+    transform: translateY(-8px) rotate(-360deg);
+}
+
+.custom-footer .footer-bottom {
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    background-color: rgb(13, 13, 44);
+    color: lightgray;
 }
 
 
 
+@media (max-aspect-ratio: 16/9){
+    .back-vid{
+        width: auto;
+        height: 100%;
+    }
+}
 
-        .footer-col h3 {
-            color: white;
-            margin-bottom: 10px;
-            font-size: 16px;
-            font-family: 'Inter', serif;
-            line-height: 30px;
-            padding: auto;
-            
-
-        }
-
-        .footer-col ul {
-            list-style: none;
-            
-            margin-bottom: 15px;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-col ul li a {
-            text-decoration: none;
-            color: #aaa;
-            transition: 0.3s;
-        }
-
-        .footer-col ul li a:hover {
-            color: white;
-            text-shadow: 0 0 10px #727fdeaa;
-        }
-
-        .footer-socials a{
-            display: inline-block;
-            font-size: 22px;
-            color: #727fde;
-            transition: transform 0.3s cubic-bezier(1, 1.56,0.64, 1), color 0.3s ease;
-            gap: 35px;
-            padding: 2px;
-        }
-
-        .footer-socials a:hover{
-            color: white;
-            text-shadow: 0 0 10px #727fde;
-            transform: translateY(-8px) rotate(-360deg);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding: 30px;
-            font-size: 12px;
-            background-color: rgb(13, 13, 44);
-            color: lightgray;
-        }
-
-        /* --- Responsive Design --- */
-        @media (max-width: 768px){
-            nav {
-                flex-direction: column;
-                height: auto;
-                padding: 10px;
-                gap: 10px;
-            }
-
-            .left {
-                justify-content: center;
-                width: 100%;
-            }
-            
-            nav .left h1 { font-size: 1.2rem; }
-
-            nav ul {
-                width: 90%;
-                justify-content: center;
-                flex-wrap: wrap;
-                padding: 10px;
-                margin: 0;
-                gap: 5px;
-            }
-
-            nav ul a { font-size: 14px; }
-            .box-icons { gap: 15px; }
-            .box-icons a { width: 30px; height: 30px; font-size: 18px; }
+@media (min-aspect-ratio: 16/9){
+    .back-vid{
+        width: 100%;
+        height: auto;
+    }
+}
+           
             
             main {
                 padding-top: 170px; /* Adjust padding for taller mobile nav */
@@ -401,7 +398,7 @@
                 align-items: center;
                 text-align: center;
             }
-        }
+        
 
     </style>
 
@@ -486,23 +483,32 @@
 
     <!-- New Navigation Bar -->
     <nav>
-        <div class="left">
-            <img src="images/Luna Logo Txt.jpg" alt="logo">
-            <h1>LUNA <span class="logo-highlight">PIONEERS</span></h1>
-        </div>
-        <ul>
-           <li><a href="index.html" target="_blank">Home</a></li>
-           <li><a href="AboutUs.html" target="_blank">About us</a></li>
-           <li><a href="#footer">Contact</a></li>
-           
-           <li><a href="pj.html" target="_blank">World</a></li>
-        </ul>
-        <div class="box-icons">
-            <a href="#"><i class='bx bx-movie-play'></i></a> 
-            <a href="#"><i class='bx bx-message-minus'></i></a>
-            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-        </div>
-    </nav>
+            <div class="left">
+                <img src="images/Luna Logo Txt.jpg" alt="logo">
+                <h1><spam style="color: rgb(65, 65, 242);">LUNA PIONEERS</spam></h1>
+            </div>
+            <ul>
+               <a href="index.html" target="_parent">Home</a>
+        </li>
+        <li>
+          <a href="AboutUs.html" target="_blank">About us</a>
+        </li>
+        <li>
+          <a href="#footer">Contact</a>
+        </li>
+        
+        <li>
+          <a href="pj.html">World</a>
+        </li>
+                
+            </ul>
+            <div class="box-icons">
+                <a href="https://youtu.be/VO-df6nkLhc?list=RDVO-df6nkLhc&t=2"><i class='bx  bx-movie-play'  ></i> </a> 
+                <a href="#"><i class='bx  bx-message-minus'  ></i> </a>
+                <a href="#"><i class='bx bxl-facebook-circle'></i> </a>
+            </div>
+
+        </nav> <br> <br>
 
     <!-- Main Content -->
     <main>
@@ -542,62 +548,82 @@
     </div>
 
     <!-- New Footer -->
-    <footer id="footer" class="custom-footer">
-        <div class="footer-top">
-    <div class="footer-col footer-logo">
-    <!-- Back arrow -->
-    <a href="#" class="footer-back-arrow"><i class='bx bx-chevron-left'></i></a>
-
-    <!-- Logo and text -->
-    <div class="logo-text">
-        <img src="images/Luna Logo Plain.jpg" alt="Luna Logo" class="footer-logo-img">
-        <h2 class="footer-title">Luna Pioneers</h2>
-        <p class="footer-desc">Explore magical lore, Hogwarts knowledge, and mythical creatures.</p>
-        <p class="footer-crafted">
-            Crafted with passion by <strong>Luna Pioneers.</strong>
-        </p>
+   <footer id="footer" class="custom-footer">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <div class="logo-title">
+        <img src="images/Luna Logo Plain.jpg" alt="Luna Logo">
+      </div>
+      <h2>Luna Pioneers</h2>
+    <p>Explore magical lore, Hogwarts knowledge, and mytical creatures.<br> Crafted with passion by <strong> Luna Pioneers.</strong> </p>
     </div>
-</div>
 
-            <div class="footer-col">
-                <h3>Travel Links</h3>
-                <ul>
-                    <li><a href="index.html" target="_blank">Home</a></li>
-                    <li><a href="AboutUs.html" target="_blank">About us</a></li>
-                    <li><a href="#footer">Contact</a></li>
-                    
-                    <li><a href="pj.html" target="_blank">World</a></li>
-                </ul>
-            </div>
+    <div class="footer-col">
+      <h3>Travel Links</h3>
+      <ul>
+        <li>
+          <a href="index.html" target="_blank">Home</a>
+        </li>
+        <li>
+          <a href="AboutUs.html" target="_blank">About us</a>
+        </li>
+        <li>
+          <a href="#footer">Contact</a>
+        </li>
+        
+        <li>
+          <a href="pj.html" target="_self">World</a>
+        </li>
+      </ul>
+    </div>
 
-            <div class="footer-col">
-                <h3>Most Viewed</h3>
-                <ul>
-                    <li><a href="newcreature.html" target="_blank">Creatures</a></li>
-                    <li><a href="#">Wands</a></li>
-                    <li><a href="loarn.html" target="_self">Characters</a></li>
-                    <li><a href="#">Ravenclaw</a></li>
-                    <li><a href="#">Spells</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <h3>Social Media</h3>
-                <div class="footer-socials">
-                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-                    <a href="#"><i class='bx bxs-videos'></i></a>
-                    <a href="#"><i class='bx bxl-discord'></i></a>
-                    <a href="#"><i class='bx bxl-twitch'></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2025 Luna Pioneers | For educational use only. All rights belong to J.K. Rowling & Warner Bros.</p>
-        </div>
-    </footer>
+    <div class="footer-col">
+      <h3>Most viewed</h3>
+      <ul>
+        <li>
+          <a href="newcreature.html" target="_blank">Creatures</a>
+        </li>
+        <li>
+          <a href="Wizarding Wands.html" target="_blank" >Wands</a>
+        </li>
+        <li>
+          <a href="loarn.html" target="_blank">Characters</a>
+        </li>
+        <li>
+          <a href="#">Ravenclaw</a>
+        </li>
+        <li>
+          <a href="Spell.html" target="_blank" >Spells</a>
+        </li>
+      </ul>
+    </div>
 
-    <!-- JavaScript-->
-    <script>
+    <div class="footer-col">
+      <h3>Social Media</h3>
+
+      <div class="footer-socials">
+        
+          <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+        
+          <a href="#"><i class='bx bxs-videos'></i></a>
+        
+          <a href="#"><i class='bx bxl-discord'></i></a>
+        
+        
+          <a href="#"><i class='bx bxl-twitch'></i></a>
+        
+      </div>
+        
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Luna Pioneers | For educational use only. All rights belong to J.K. Rowling & Warner Bros.</p>
+  </div>
+</footer>
+
+
+        <script>
     // =========================================================================
     //            HARRY POTTER CHARACTER WEBSITE - JAVASCRIPT LOGIC
     // =========================================================================
@@ -615,12 +641,12 @@
             { id: 3, name: 'Ron Weasley', house: 'Gryffindor', image: 'https://external-preview.redd.it/VUSrsTTnZydNBmxAQc9GdKzfR5YmJtXPiIJmWfZ2Few.jpg?auto=webp&s=b78132bd502f9a2242e5ee70c1f78d154f2171a9', shortDesc: 'Harry\'s loyal friend', title: 'A Loyal Friend', about: 'A loyal, humorous, and strategic thinker.', longDesc: 'Ron is Harry\'s first friend at Hogwarts and remains steadfastly loyal through their adventures, showing immense bravery.', fullStory: 'Ronald Bilius Weasley, the sixth of seven children, often felt overshadowed by his brothers but proved himself a hero in his own right. His loyalty to Harry was nearly absolute, providing much-needed humor and a connection to the wizarding family Harry never had. His strategic mind, famously demonstrated during the life-sized wizard\'s chess game, and his courage in the face of his deepest fears (spiders!) were crucial to the trio\'s success. He became an Auror alongside Harry and helped run the successful Weasleys\' Wizard Wheezes.' },
             { id: 4, name: 'Severus Snape', house: 'Slytherin', image: 'https://media1.popsugar-assets.com/files/thumbor/74K1b6ceu46-s1YKA3HyyFu3_9Q=/2850x1895/top/filters:format_auto():quality(85):extract_cover()/2020/08/19/813/n/1922283/tmp_KdlTb4_5f0aefacc3088515_MCDHAPO_EC587.jpg', shortDesc: 'Potions Master at Hogwarts', title: 'The Potions Master', about: 'A complex, stern, and profoundly brave man.', longDesc: 'The enigmatic Potions Master, Snape played a crucial role as a double agent, driven by his lifelong love for Lily Potter.', fullStory: 'Severus Snape is one of the most complex characters in the series. His cold demeanor and apparent hatred for Harry masked a deep, unrequited love for Harry\'s mother, Lily. This love compelled him to secretly protect Harry while acting as a double agent for Dumbledore against Voldemort. As Potions Master and later Headmaster of Hogwarts, he made immense sacrifices, living a life of constant danger and isolation. His final act was to give Harry the memories that contained the key to defeating Voldemort, revealing himself as the "bravest man" Harry ever knew.' },
             { id: 5, name: 'Albus Dumbledore', house: 'Gryffindor', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_GCOA8zi0glwyeU-v2YgVmZjXPHz6E03G1gZs8v8TKn1HkZOPJVrk7vmWuoE9FOukyVU&usqp=CAU', shortDesc: 'Headmaster of Hogwarts', title: 'The Greatest Wizard', about: 'Wise, powerful, and a guiding force for good.', longDesc: 'Albus Dumbledore was the Headmaster of Hogwarts and the leader of the Order of the Phoenix. He was the only one Voldemort ever feared.', fullStory: 'Albus Percival Wulfric Brian Dumbledore was a wizard of immense power, wisdom, and a penchant for knitting patterns. As Headmaster, he was a mentor and protector to Harry Potter. He orchestrated the long-term plan to defeat Voldemort, understanding that love was the most powerful magic of all. Despite his sometimes manipulative methods and a troubled past involving his family and Gellert Grindelwald, his ultimate goal was always for the greater good. His death, planned with Snape, was a final, strategic sacrifice to aid Harry in his quest.' },
-            { id: 6, name: 'Lord Voldemort', house: 'Slytherin', image: 'data:image/jpeg;base64,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', shortDesc: 'The Dark Lord', title: 'He-Who-Must-Not-Be-Named', about: 'A powerful, cruel, and feared Dark wizard.', longDesc: 'Formerly Tom Riddle, Lord Voldemort is obsessed with blood purity and achieving immortality through his Horcruxes.', fullStory: 'Born Tom Marvolo Riddle, he was the heir of Salazar Slytherin. His fear of death drove him to split his soul into multiple Horcruxes, rendering him nearly immortal. He amassed an army of Death Eaters and unleashed two wizarding wars, seeking to purge the world of Muggles and Muggle-borns. His arrogance and inability to understand love were his ultimate weaknesses, leading to his downfall at the hands of Harry Potter, the boy he inadvertently marked as his equal.' },
+            { id: 6, name: 'Lord Voldemort', house: 'Slytherin', image: 'https://preview.redd.it/which-lord-voldemort-look-would-you-have-preferred-in-the-v0-b4knqbvx2via1.jpg?width=640&crop=smart&auto=webp&s=dd519a3a3a4915429d7949c821648138bf431430', shortDesc: 'The Dark Lord', title: 'He-Who-Must-Not-Be-Named', about: 'A powerful, cruel, and feared Dark wizard.', longDesc: 'Formerly Tom Riddle, Lord Voldemort is obsessed with blood purity and achieving immortality through his Horcruxes.', fullStory: 'Born Tom Marvolo Riddle, he was the heir of Salazar Slytherin. His fear of death drove him to split his soul into multiple Horcruxes, rendering him nearly immortal. He amassed an army of Death Eaters and unleashed two wizarding wars, seeking to purge the world of Muggles and Muggle-borns. His arrogance and inability to understand love were his ultimate weaknesses, leading to his downfall at the hands of Harry Potter, the boy he inadvertently marked as his equal.' },
             { id: 7, name: 'Draco Malfoy', house: 'Slytherin', image: 'https://i.quotev.com/jjvywhlyaaaa.jpg', shortDesc: 'A cunning Slytherin student', title: 'The Boy Who Had No Choice', about: 'Arrogant, prejudiced, but ultimately conflicted.', longDesc: 'Draco is Harry\'s rival from their first day at Hogwarts. Raised in a pure-blood supremacist family, he is often a bully but struggles with the immense pressure and dark tasks given to him by Lord Voldemort.', fullStory: 'Draco Malfoy was raised to believe in the superiority of pure-blood wizards. He served as a foil to Harry Potter for most of their school years, embodying prejudice and arrogance. However, his journey took a darker turn when he was tasked by Voldemort to kill Dumbledore. Draco found himself unable to commit murder, revealing a conflicted conscience beneath his cruel exterior. In the end, his and his family\'s hesitations played a small but crucial part in Voldemort\'s defeat.' },
             { id: 8, name: 'Sirius Black', house: 'Gryffindor', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUv5Ab_CpzF4jmUNU-Kmn-XOAL1p2eqVTjhw&s', shortDesc: 'Harry\'s loving godfather', title: 'Padfoot', about: 'Rebellious, loyal, and a devoted godfather.', longDesc: 'Sirius Black was one of the Marauders and Harry Potter\'s godfather. Falsely imprisoned in Azkaban, he escaped to protect Harry.', fullStory: 'Sirius Black was the heir of a dark, pure-blood family but rebelled by becoming a Gryffindor and a loyal friend to James Potter. As an unregistered Animagus (a large black dog named Padfoot), he was a member of the Marauders. After being framed for the murder of Peter Pettigrew and a dozen Muggles, he spent twelve years in Azkaban. He escaped and became the loving, albeit reckless, godfather Harry desperately needed, offering a link to his parents and a brief taste of family before his tragic death.' },
             { id: 9, name: 'Rubeus Hagrid', house: 'Gryffindor', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz8ccN57G6NnzskZUTTD8vV9pvtbmKJNHGmg&s', shortDesc: 'Keeper of Keys and Grounds', title: 'Keeper of Keys', about: 'A gentle giant with a love for magical creatures.', longDesc: 'Hagrid is the Keeper of Keys and Grounds at Hogwarts. A half-giant with a kind heart, he introduced Harry to the wizarding world.', fullStory: 'Rubeus Hagrid, a half-giant wizard, was expelled from Hogwarts in his third year. Dumbledore allowed him to stay on as gamekeeper. Fiercely loyal and possessing immense strength, Hagrid has a deep affection for all magical creatures, no matter how dangerous. He served as Harry\'s first guide and a constant, warm presence in his life. He was a member of the Order of the Phoenix and fought bravely in both wizarding wars, his loyalty to Dumbledore and Harry never wavering.' },
             { id: 10, name: 'Luna Lovegood', house: 'Ravenclaw', image: 'https://i.pinimg.com/736x/41/21/0b/41210b9527edbf2a9e7e1eef2b145c98.jpg', shortDesc: 'An eccentric Ravenclaw', title: 'Loony Lovegood', about: 'Quirky, open-minded, and a loyal friend.', longDesc: 'Known for her dreamy disposition, Luna is a uniquely perceptive and brave member of Dumbledore\'s Army.', fullStory: 'Luna Lovegood was often ostracized for her eccentric beliefs and odd behavior. However, she possessed a rare wisdom and an unflinching ability to be herself. She saw things others missed and offered comfort and perspective to Harry in his darkest moments. A core member of Dumbledore\'s Army, she fought bravely at the Department of Mysteries and the Battle of Hogwarts, proving that her unconventional nature was a source of great strength and loyalty.' },
-            { id: 11, name: 'Cedric Diggory', house: 'Hufflepuff', image: 'data:image/jpeg;base64,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', shortDesc: 'The Hogwarts Champion', title: 'The Triwizard Champion', about: 'Kind, fair, and a talented wizard.', longDesc: 'Cedric was a popular Hufflepuff student and the Hogwarts Champion in the Triwizard Tournament before his tragic death.', fullStory: 'Cedric Diggory represented the best of Hufflepuff house: he was fair-minded, honest, and hardworking. As a talented and popular student, he was chosen as one of two Hogwarts champions in the Triwizard Tournament. He showed immense sportsmanship, particularly towards Harry. His senseless murder by Peter Pettigrew on Voldemort\'s command marked a turning point in the series, signaling the Dark Lord\'s terrifying return and the end of an era of relative peace.' }
+            { id: 11, name: 'Cedric Diggory', house: 'Hufflepuff', image: 'https://i.pinimg.com/474x/4e/49/5d/4e495d36f905d5d92da2c002079465dc.jpg', shortDesc: 'The Hogwarts Champion', title: 'The Triwizard Champion', about: 'Kind, fair, and a talented wizard.', longDesc: 'Cedric was a popular Hufflepuff student and the Hogwarts Champion in the Triwizard Tournament before his tragic death.', fullStory: 'Cedric Diggory represented the best of Hufflepuff house: he was fair-minded, honest, and hardworking. As a talented and popular student, he was chosen as one of two Hogwarts champions in the Triwizard Tournament. He showed immense sportsmanship, particularly towards Harry. His senseless murder by Peter Pettigrew on Voldemort\'s command marked a turning point in the series, signaling the Dark Lord\'s terrifying return and the end of an era of relative peace.' }
         ];
 
         const grid = document.querySelector('.character-grid');
@@ -628,7 +654,7 @@
         const detailView = document.getElementById('character-detail-view');
         const magicOverlay = document.getElementById('magic-animation-overlay');
         const storyModal = document.getElementById('full-story-modal');
-        const magicSound = new Audio('magic_sound.mp3');
+        const magicSound = new Audio('magic_sound.mp3'); 
 
         function displayCharacters(charArray) {
             grid.innerHTML = '';
@@ -649,15 +675,18 @@
             });
         }
         
+        // This function "VIEW MORE" 
         function showDetailView(charId) {
             const character = characters.find(c => c.id == charId);
             if (!character) return;
 
+            // Trigger magic wand animation and sound
             magicOverlay.classList.remove('hidden');
             magicSound.play().catch(e => console.warn("Audio play failed"));
 
             setTimeout(() => {
-                magicOverlay.classList.add('hidden');
+                magicOverlay.classList.add('hidden'); // Hide wand after animation
+                
                 const detailContent = detailView.querySelector('.detail-content');
                 const houseLogoUrl = houseData[character.house] ? houseData[character.house].logo : '';
 
@@ -677,16 +706,17 @@
                     </div>
                     <div class="detail-buttons">
                         <button class="detail-btn back-btn">← Back</button>
-                        <button class="detail-btn heart-btn">💛</button>
                         <button class="detail-btn more-btn">More</button>
-                    </div>`;
+                    </div>`; // removed yellow heart button
                 detailView.classList.remove('hidden');
                 
                 detailView.querySelector('.back-btn').addEventListener('click', () => detailView.classList.add('hidden'));
-                detailView.querySelector('.heart-btn').addEventListener('click', createHeartBurst);
-                detailView.querySelector('.more-btn').addEventListener('click', () => showFullStory(charId));
+                detailView.querySelector('.more-btn').addEventListener('click', (e) => {
+                    createMagicEmojiBurst(e); 
+                    showFullStory(charId);
+                });
 
-            }, 1500);
+            }, 1500); // duration of the magic wand animation
         }
         
         function showFullStory(charId) {
@@ -698,24 +728,25 @@
             storyModal.classList.remove('hidden');
         }
 
-        function createHeartBurst(event) {
+        // New  magic emoji 
+        function createMagicEmojiBurst(event) {
             const rect = event.currentTarget.getBoundingClientRect();
             const originX = rect.left + rect.width / 2;
             const originY = rect.top + rect.height / 2;
-            const hearts = ['❤️', '🧡', '💛', '💚', '💙', '💜', '💖'];
-            for (let i = 0; i < 30; i++) {
-                const heart = document.createElement('div');
-                heart.className = 'flying-heart';
-                heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
-                heart.style.left = `${originX}px`;
-                heart.style.top = `${originY}px`;
-                const xEnd = (Math.random() - 0.5) * 400;
-                const yEnd = -(Math.random() * 300 + 200);
-                heart.style.setProperty('--x-end', `${xEnd}px`);
-                heart.style.setProperty('--y-end', `${yEnd}px`);
-                heart.style.animation = `fly-up ${Math.random() * 1 + 1.5}s ease-out forwards`;
-                document.body.appendChild(heart);
-                setTimeout(() => { heart.remove(); }, 2500);
+            const magicEmojis = ['✨', '🌟', '💫', '🧙🏼‍♂️', '🧹', '⚡', '🪄', '🔮']; // Array of magic emojis
+            for (let i = 0; i < 50; i++) { // more emojis for a burst effect
+                const emoji = document.createElement('div');
+                emoji.className = 'flying-heart'; 
+                emoji.innerHTML = magicEmojis[Math.floor(Math.random() * magicEmojis.length)];
+                emoji.style.left = `${originX}px`;
+                emoji.style.top = `${originY}px`;
+                const xEnd = (Math.random() - 0.5) * 600; // wider spread
+                const yEnd = -(Math.random() * 300 + 400); // higher ascent
+                emoji.style.setProperty('--x-end', `${xEnd}px`);
+                emoji.style.setProperty('--y-end', `${yEnd}px`);
+                emoji.style.animation = `fly-up ${Math.random() * 4 + 6}s ease-out forwards`;
+                document.body.appendChild(emoji);
+                setTimeout(() => { emoji.remove(); }, 2500); // emojis disappear after animation
             }
         }
 
@@ -738,7 +769,7 @@
             const btn = e.target.closest('.view-more-btn');
             if (btn) {
                 const card = btn.closest('.character-card');
-                showDetailView(card.getAttribute('data-id'));
+                showDetailView(card.getAttribute('data-id')); 
             }
         });
 
