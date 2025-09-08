@@ -355,6 +355,7 @@ figcaption {
 }
 
 .custom-footer .footer-logo h2 {
+    text-align: start;
     font-size: 28px;
     color: #727fde;
     padding-bottom: 15px;

@@ -592,6 +592,9 @@ h3 {
     color: #727fde;
     padding-bottom: 15px;
     font-family: 'Cinzel Decorative', serif;
+    margin-bottom: 0;
+    border-bottom:none;
+    padding-bottom: 0px;
 }
 
 .custom-footer .footer-col h3 {
@@ -606,7 +609,7 @@ h3 {
 }
 
 .custom-footer .footer-col ul li {
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 .custom-footer .footer-col ul li a {

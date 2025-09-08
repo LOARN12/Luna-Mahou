@@ -1,3 +1,9 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
 body {
   font-family: 'Cormorant Garamond', serif;
   margin: 0;
@@ -383,12 +389,14 @@ footer {
 }
 
 .custom-footer .footer-logo p {
+  text-align: start;
     font-size: 14px;
     color: rgb(255, 255, 255);
     margin-bottom: 15px;
 }
 
 .custom-footer .footer-logo h2 {
+  text-align: start;
     font-size: 28px;
     color: #727fde;
     padding-bottom: 15px;
@@ -396,6 +404,7 @@ footer {
 }
 
 .custom-footer .footer-col h3 {
+  text-align: start;
     color: white;
     margin-bottom: 15px;
     font-size: 16px;
@@ -407,10 +416,12 @@ footer {
 }
 
 .custom-footer .footer-col ul li {
+text-align: start;
     margin-bottom: 15px;
 }
 
 .custom-footer .footer-col ul li a {
+    text-align: start;
     text-decoration: none;
     color: #aaa;
     transition: 0.3s;
@@ -422,6 +433,7 @@ footer {
 }
 
 .custom-footer .footer-socials a {
+  text-align: start;
     display: inline-block;
     font-size: 25px;
     margin-right: 15px;

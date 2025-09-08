@@ -1,11 +1,13 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #fffbea;
+    background: url("images/hufflepuff-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
     color: #333;
     margin: 0;
     padding: 0;
-  }
-  /* NAVBAR MAIN CONTAINER */
+}
+
+ /* NAVBAR MAIN CONTAINER */
 nav {
     position: fixed;
     display: flex;
@@ -23,14 +25,15 @@ nav {
     font-family: "Inter", sans-serif; /* keeps font consistent */
 }
 
-/* LEFT SECTION */
-nav .left {
-    display: flex;
-    align-items: center;
+nav .left h1 spam{
+    font-family: "Inter", sans-serif; /* keeps font consistent */
+  font-size:33px;
+  color: #111;
+  
 }
 
-nav .left h1{
-    font-size: 30px;
+/* LEFT SECTION */
+nav .left {
     display: flex;
     align-items: center;
 }
@@ -132,28 +135,77 @@ nav .box-icons a:hover {
     }
 }
 
+header {
+  background: linear-gradient(135deg, #ffdb58 0%, #f0c420 100%);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #111;
+  position: relative;
+  overflow: hidden;
+}
+
+header h1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 3rem;
+  color: #111;
+  text-shadow: 0 0 12px #ffec8b, 0 0 25px #d4af37;
+  animation: fadeIn 2s ease;
+}
+
+header p {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #333;
+  text-shadow: 0 0 8px rgba(255, 235, 59, 0.7);
+}
+
+header img.logo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #d4af37;
+  box-shadow: 0 0 20px #ffdb58aa;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
   
-  header {
-    background: linear-gradient(135deg, #ffdb58 0%, #f5deb3 100%);
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  header h1 {
-    margin: 0.5rem 0;
-    font-size: 2.5rem;
-  }
-  
-  header p {
-    font-style: italic;
-  }
+section {
+  background: #fffdf5a9;
+  border: 2px solid #ffdb58;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1), 0 0 15px rgba(255, 215, 0, 0.4);
+}
+section h2 {
+  font-family: 'Cinzel Decorative', serif;
+  color: #b8860b;
+  text-shadow: 0 0 8px #ffdb58;
+}
+#traits ul li {
+  padding: 10px;
+  margin: 8px 0;
+  background: #fff8dc;
+  border-left: 4px solid #d4af37;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+#traits ul li:hover {
+  background: #ffec8b;
+  transform: translateX(5px);
+}
 
-  header img {
-    text-align: center;
-    width: 200px;
-    height: 200px;
-  }
   
   
   .crest {
@@ -196,17 +248,23 @@ nav .box-icons a:hover {
   }
   
   .member-card {
-    background: #fff8dc;
-    border: 2px solid #ffdb58;
-    border-radius: 10px;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .member-card img {
-    width: 100%;
-    border-radius: 8px;
-  }
+  background: #fff8dc;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.member-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.6);
+}
+.member-card img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #ffdb58;
+}
+
   
   button {
     margin-top: 1rem;
@@ -228,16 +286,51 @@ nav .box-icons a:hover {
     font-style: italic;
     font-size: 1.2rem;
   }
+  #show-quote {
+  background: linear-gradient(135deg, #ffdb58, #d4af37);
+  color: #111;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ffdb58aa;
+  transition: 0.3s;
+}
+#show-quote:hover {
+  background: #e6c200;
+  box-shadow: 0 0 20px #ffdb58, 0 0 40px #ffec8b;
+}
+
   
   /* This is Luna Pioneers footer */
+/* Footer Base */
 .custom-footer {
     background-color: #0a0c1a;
     color: lightgray;
     padding: 40px 20px 0;
     font-family: 'Inter', sans-serif;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    box-sizing: border-box;
 }
 
+/* Footer Top Section */
+.custom-footer .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;   /* ✅ content stays centered */
+    margin: 0 auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer Columns */
+.custom-footer .footer-col {
+    flex: 1 1 180px;
+    margin: 20px;
+}
+
+/* Logo */
 .custom-footer .footer-logo .logo-title {
     display: flex;
     align-items: center;
@@ -250,34 +343,23 @@ nav .box-icons a:hover {
     object-fit: contain;
 }
 
-.custom-footer .footer-top {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1100px;
-    margin: auto;
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.custom-footer .footer-col {
-    flex: 1 1 180px;
-    margin: 20px;
-}
-
-.custom-footer .footer-logo p {
-    font-size: 14px;
-    color: rgb(255, 255, 255);
-    margin-bottom: 15px;
-}
-
 .custom-footer .footer-logo h2 {
     font-size: 28px;
     color: #727fde;
-    padding-bottom: 15px;
+    border: none;
     font-family: 'Cinzel Decorative', serif;
+    font-weight: bold;
+    margin: 0;
 }
 
+.custom-footer .footer-logo p {
+    margin-top: 0;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Links */
 .custom-footer .footer-col h3 {
     color: white;
     margin-bottom: 15px;
@@ -287,6 +369,7 @@ nav .box-icons a:hover {
 .custom-footer .footer-col ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .custom-footer .footer-col ul li {
@@ -304,12 +387,13 @@ nav .box-icons a:hover {
     text-shadow: 0 0 10px #727fdeaa;
 }
 
+/* Social Icons */
 .custom-footer .footer-socials a {
     display: inline-block;
     font-size: 25px;
     margin-right: 15px;
     color: #727fde;
-    transition: transform 0.3s cubic-bezier(1, 1.56,0.64, 1), color 0.3s ease;
+    transition: transform 0.3s cubic-bezier(1, 1.56, 0.64, 1), color 0.3s ease;
 }
 
 .custom-footer .footer-socials a:hover {
@@ -318,12 +402,53 @@ nav .box-icons a:hover {
     transform: translateY(-8px) rotate(-360deg);
 }
 
+/* Footer Bottom */
 .custom-footer .footer-bottom {
     text-align: center;
     padding: 15px;
     font-size: 12px;
     background-color: rgb(13, 13, 44);
     color: lightgray;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+    .custom-footer .footer-top {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .custom-footer .footer-col,
+    .custom-footer .footer-logo {
+        flex: 1 1 100%; 
+        margin: 15px 0; /* Mobile မှာ vertical margin ထားဖို့ */
+        text-align: center; 
+        max-width: 90%; /* Smaller screens မှာပိုကျယ်အောင် */
+    }
+    .custom-footer .footer-logo .logo-title {
+        margin-bottom: 10px; 
+    }
+    .custom-footer .footer-logo h2 {
+        margin-bottom: 10px; 
+    }
+    .custom-footer .footer-logo p {
+         line-height: 1.3; 
+         max-width: unset; 
+         padding: 0 10px; 
+    }
+    .custom-footer .footer-socials {
+        justify-content: center; 
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-footer .footer-logo {
+        max-width: 95%; /* ပိုသေးတဲ့ screen အတွက် ပိုကျယ်အောင် */
+    }
 }
 
 
