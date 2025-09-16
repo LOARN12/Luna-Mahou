@@ -170,7 +170,7 @@ nav .box-icons a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 300px;
+    gap: 200px;
     max-width: 1000px;
     margin: 100px auto;
     padding: 40px;
@@ -183,7 +183,7 @@ nav .box-icons a:hover {
 }
 
 .side-text {
-    max-width: 500px;
+    max-width: 600px;
     color: white;
 
 }

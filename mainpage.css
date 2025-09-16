@@ -642,3 +642,59 @@ header ul a {
         height: auto;
     }
 }
+/* Mobile & Tablet adjustments */
+@media (max-width: 768px) {
+
+    /* Container spacing smaller */
+    .container {
+        gap: 50px;
+    }
+
+    /* Hero section */
+    .hero {
+        flex-direction: column; 
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-info {
+        position: relative; 
+        left: 0;
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .hero-info h1 {
+        font-size: 32px;   /* smaller title */
+        line-height: 40px;
+    }
+
+    .hero-info p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .hero-info button,
+    .hero-info .enter-button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    /* Hero video box */
+    .hero-vid-box video {
+        height: 300px;  /* smaller video */
+    }
+
+    /* Scroll down icon */
+    .scroll-down {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 5%;
+    }
+
+    /* Carousel */
+    .carousel {
+        width: 90%;
+        height: auto;
+    }
+}
