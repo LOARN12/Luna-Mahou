@@ -692,9 +692,5 @@ header ul a {
         bottom: 5%;
     }
 
-    /* Carousel */
-    .carousel {
-        width: 90%;
-        height: auto;
-    }
+    
 }
